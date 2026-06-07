@@ -1,0 +1,501 @@
+component_id,component_name,type,language,category,license,author,ecosystem,status,created_at,initial_quality,documentation_quality,has_website,has_examples,has_tutorials,has_ci,has_tests,contributors,forks,open_issues,closed_issues,dependencies,dependents
+1,simple-library-1001-client,Library,PHP,Documentation,LGPL-2.1,Apache Software Foundation,Maven Central,Maintained,2016-12-16,0.684,0.493,0,0,0,1,0,31,458,87,246,30,756
+2,light-library-1002,Library,PHP,Big Data,Unlicense,VMware,Maven Central,Maintained,2020-01-16,0.790,0.827,1,1,0,1,0,12,3,97,319,2,1601
+3,super-api-1003-utils,API,C#,Big Data,AGPL-3.0,Eclipse Foundation,NuGet,Legacy,2020-09-16,0.729,0.631,0,0,1,0,0,48,696,23,295,9,4823
+4,template-1004-api,Template,C#,Networking,MIT,Spring,NuGet,Maintained,2019-12-16,0.686,0.910,0,0,1,0,0,3,332,22,423,33,4402
+5,fast-logging-client,Tool,PHP,Logging,GPL-3.0,Spring,Maven Central,Deprecated,2020-03-16,0.514,0.226,0,0,1,0,1,1,151,42,441,34,4996
+6,mini-caching-client,Library,Ruby,Caching,MIT,Spring,RubyGems,Legacy,2017-02-16,0.687,0.602,0,1,0,0,0,43,331,98,293,16,2978
+7,micro-template-1007-core,Template,C#,Web Framework,BSD-3-Clause,Google,NuGet,Active,2017-01-16,0.672,0.310,0,1,0,0,1,26,181,11,343,23,1553
+8,easy-template-1008-utils,Template,Java,Documentation,Unlicense,Microsoft,Maven Central,Maintained,2021-08-16,0.981,0.578,0,1,0,0,1,32,425,53,95,9,3459
+9,super-plugin-1009-api,Plugin,PHP,Serialization,AGPL-3.0,Individual Contributors,Maven Central,Experimental,2017-08-16,0.688,0.704,0,0,0,0,0,11,866,19,288,25,4590
+10,micro-library-1010-spring-boot-starter,Library,Scala,Code Analysis,GPL-3.0,Apache Software Foundation,Maven Central,Stable,2020-01-16,0.664,1.000,0,1,1,1,1,16,613,5,300,37,5
+11,fast-networking-api,API,C++,Networking,EPL-2.0,Amazon,Maven Central,Stable,2021-01-16,0.786,0.862,0,0,0,0,1,20,518,24,57,41,956
+12,library-1012-core,Library,Ruby,Code Analysis,GPL-3.0,Amazon,RubyGems,Experimental,2020-02-16,0.864,0.517,0,0,1,0,0,3,992,52,445,2,1887
+13,mini-tool-1013-api,Tool,Go,Testing,Apache-2.0,Spring,Go Modules,Experimental,2019-12-16,0.537,0.447,1,0,0,0,1,38,688,8,94,8,867
+14,simple-sdk-1014-lib,SDK,C++,Utilities,EPL-2.0,Google,Maven Central,Legacy,2023-05-16,0.899,0.794,0,0,0,0,1,45,498,52,201,21,402
+15,light-library-1015,Library,Python,Logging,Unlicense,Microsoft,PyPI,Maintained,2022-11-16,0.630,0.658,1,0,1,0,0,26,526,57,98,15,2148
+16,micro-library-1016-lib,Library,Swift,Documentation,LGPL-2.1,Facebook,Maven Central,Maintained,2023-01-16,0.847,0.400,0,1,0,0,0,20,233,74,434,21,4957
+17,mini-plugin-1017-core,Plugin,Swift,Logging,MPL-2.0,Individual Contributors,Maven Central,Experimental,2016-08-16,0.914,0.675,0,0,0,1,1,10,894,10,386,24,4527
+18,networking-lib,Middleware,Rust,Networking,MIT,Amazon,Crates.io,Experimental,2023-07-16,0.958,0.242,0,0,1,1,1,45,649,14,282,13,1854
+19,fast-testing-api,Template,Go,Testing,Apache-2.0,Spring,Go Modules,Deprecated,2022-01-16,0.816,0.709,1,0,1,0,1,31,678,98,182,6,1829
+20,easy-sdk-1020,SDK,Python,Testing,Apache-2.0,University Research,PyPI,Experimental,2016-04-16,0.705,0.718,0,0,0,1,0,10,568,46,459,40,1048
+21,light-starter-1021-client,Starter,C#,Messaging,AGPL-3.0,Facebook,NuGet,Experimental,2022-03-16,0.814,0.423,0,0,0,0,0,6,461,90,83,11,3732
+22,micro-middleware-1022-spring-boot-starter,Middleware,Kotlin,Code Analysis,Apache-2.0,Red Hat,Maven Central,Maintained,2016-10-16,0.569,0.531,0,0,1,1,0,33,567,49,488,31,2020
+23,awesome-documentation-spring-boot-starter,Template,Ruby,Documentation,EPL-2.0,Open Source Community,RubyGems,Legacy,2018-09-16,0.828,0.438,1,1,0,0,1,41,988,32,113,28,4788
+24,light-middleware-1024-utils,Middleware,Python,Logging,GPL-3.0,VMware,PyPI,Maintained,2020-10-16,0.946,0.640,0,1,1,1,0,40,730,84,101,40,4755
+25,micro-starter-1025-lib,Starter,Python,Logging,MIT,Red Hat,PyPI,Legacy,2023-03-16,0.819,0.655,0,0,1,0,0,6,271,29,106,41,1970
+26,awesome-framework-1026-spring-boot-starter,Framework,JavaScript,Documentation,BSD-3-Clause,Red Hat,npm,Legacy,2016-11-16,0.919,0.486,0,0,1,0,0,21,209,59,348,41,2000
+27,fast-framework-1027,Framework,Kotlin,Web Framework,GPL-3.0,University Research,Maven Central,Stable,2019-12-16,0.928,0.774,1,0,1,0,1,57,50,50,150,17,2817
+28,simple-library-1028-core,Library,PHP,Machine Learning,ISC,JetBrains,Maven Central,Active,2022-11-16,0.657,0.538,1,0,0,1,0,15,648,78,121,27,3104
+29,simple-plugin-1029-spring-boot-starter,Plugin,C#,Utilities,Apache-2.0,Apache Software Foundation,NuGet,Maintained,2022-07-16,0.690,0.434,1,0,0,0,1,19,750,60,44,46,338
+30,light-database-driver-spring-boot-starter,Driver,Rust,Database Driver,MPL-2.0,Apache Software Foundation,Crates.io,Legacy,2022-06-16,0.782,0.542,0,0,1,0,0,38,384,82,223,44,1947
+31,mini-code-analysis-spring-boot-starter,Tool,Swift,Code Analysis,MPL-2.0,VMware,Maven Central,Deprecated,2019-05-16,0.824,0.362,0,0,0,1,0,11,511,61,42,42,2908
+32,micro-template-1032-core,Template,Python,Documentation,EPL-2.0,VMware,PyPI,Deprecated,2020-09-16,0.704,0.241,0,1,1,0,1,3,159,17,492,19,3872
+33,micro-middleware-1033,Middleware,Kotlin,Code Analysis,ISC,Eclipse Foundation,Maven Central,Deprecated,2016-07-16,0.918,0.551,0,1,0,0,0,1,743,64,433,44,4363
+34,easy-tool-1034-client,Tool,Swift,Networking,MIT,University Research,Maven Central,Stable,2017-03-16,0.695,1.000,0,1,0,0,1,38,4,24,400,38,3737
+35,awesome-tool-1035-lib,Tool,JavaScript,Machine Learning,Unlicense,Open Source Community,npm,Stable,2018-12-16,0.766,1.000,0,1,0,1,0,49,666,88,438,45,3454
+36,sdk-1036-client,SDK,Rust,Logging,GPL-3.0,Apache Software Foundation,Crates.io,Stable,2022-03-16,0.697,0.501,0,1,1,1,1,58,579,73,179,4,2637
+37,mini-ui-components-utils,Framework,C#,UI Components,LGPL-2.1,VMware,NuGet,Experimental,2017-12-16,0.926,0.370,0,0,0,0,0,49,238,98,250,3,3284
+38,mini-plugin-1038-client,Plugin,Swift,Networking,BSD-3-Clause,Amazon,Maven Central,Active,2022-10-16,0.756,0.937,0,0,1,1,1,25,52,39,304,19,3702
+39,super-sdk-1039-lib,SDK,Kotlin,Security,GPL-3.0,Eclipse Foundation,Maven Central,Active,2021-10-16,0.557,0.376,0,1,0,0,1,15,579,28,77,9,4838
+40,micro-starter-1040-spring-boot-starter,Starter,Rust,Utilities,GPL-3.0,Amazon,Crates.io,Stable,2020-11-16,0.914,0.800,0,1,1,1,0,43,583,82,308,10,1601
+41,mini-library-1041-api,Library,Ruby,Security,MIT,Amazon,RubyGems,Deprecated,2023-10-16,0.989,0.596,0,1,0,1,0,40,210,47,10,10,1124
+42,simple-framework-1042-core,Framework,C#,Serialization,BSD-3-Clause,Red Hat,NuGet,Stable,2022-06-16,0.833,0.765,0,1,0,1,0,20,899,54,75,15,1145
+43,fast-security-lib,API,Rust,Security,MPL-2.0,Google,Crates.io,Stable,2020-08-16,0.905,1.000,0,0,0,1,1,27,147,36,398,42,3861
+44,utilities-core,Starter,Python,Utilities,AGPL-3.0,JetBrains,PyPI,Legacy,2022-04-16,0.548,0.797,0,1,0,0,0,50,24,31,140,16,4484
+45,fast-template-1045-utils,Template,TypeScript,Utilities,Unlicense,Facebook,npm,Maintained,2021-08-16,0.947,0.825,1,1,1,0,1,21,740,25,210,26,2810
+46,light-code-analysis-lib,Driver,Kotlin,Code Analysis,MIT,University Research,Maven Central,Maintained,2019-02-16,0.934,0.717,0,0,0,0,1,10,127,97,67,40,4298
+47,fast-starter-1047,Starter,Rust,Security,Unlicense,Facebook,Crates.io,Experimental,2020-12-16,0.900,0.337,1,0,0,1,1,16,589,19,58,40,1127
+48,mini-tool-1048-client,Tool,Ruby,Utilities,ISC,Individual Contributors,RubyGems,Legacy,2020-09-16,0.692,0.330,0,1,0,0,0,9,874,98,281,25,909
+49,easy-plugin-1049-api,Plugin,Kotlin,Messaging,BSD-3-Clause,Facebook,Maven Central,Experimental,2019-01-16,0.812,0.615,0,0,0,0,1,44,798,3,108,40,251
+50,networking-lib,API,Java,Networking,AGPL-3.0,Red Hat,Maven Central,Experimental,2018-08-16,0.769,0.102,0,0,1,0,0,49,435,42,316,4,3891
+51,light-testing-utils,Tool,Ruby,Testing,EPL-2.0,VMware,RubyGems,Stable,2018-03-16,0.711,0.712,0,0,0,1,1,17,382,73,130,39,3352
+52,mini-logging,Template,C#,Logging,EPL-2.0,VMware,NuGet,Active,2020-12-16,0.617,0.736,0,1,1,0,0,4,612,93,41,35,3255
+53,fast-machine-learning-core,Library,Scala,Machine Learning,ISC,VMware,Maven Central,Stable,2022-05-16,0.674,1.000,1,1,0,0,1,17,865,3,448,23,2235
+54,mini-utilities-spring-boot-starter,Library,PHP,Utilities,EPL-2.0,JetBrains,Maven Central,Experimental,2020-09-16,0.564,0.475,1,0,0,1,1,40,89,92,393,1,3376
+55,simple-plugin-1055-api,Plugin,PHP,Code Analysis,MIT,University Research,Maven Central,Legacy,2016-08-16,0.736,0.927,0,0,0,0,0,36,752,71,331,21,3123
+56,sdk-1056,SDK,Ruby,Networking,AGPL-3.0,University Research,RubyGems,Maintained,2017-10-16,0.821,0.796,0,0,1,0,0,39,855,40,203,3,2548
+57,mini-api-1057-api,API,Python,Testing,Apache-2.0,Red Hat,PyPI,Maintained,2022-11-16,0.521,0.716,1,1,0,1,1,8,899,46,424,47,4947
+58,super-driver-1058-core,Driver,Kotlin,Machine Learning,GPL-3.0,Individual Contributors,Maven Central,Legacy,2019-05-16,0.977,0.522,1,1,0,0,1,3,489,70,239,32,1470
+59,micro-driver-1059-spring-boot-starter,Driver,Rust,UI Components,AGPL-3.0,Spring,Crates.io,Legacy,2016-05-16,0.596,0.607,0,0,0,0,1,45,348,89,477,43,856
+60,simple-caching-api,Library,TypeScript,Caching,ISC,Microsoft,npm,Deprecated,2022-05-16,0.522,0.679,0,0,0,1,1,37,863,40,237,42,3667
+61,fast-starter-1061-core,Starter,Ruby,Build Tool,Apache-2.0,Amazon,RubyGems,Maintained,2023-01-16,0.818,0.604,0,0,1,0,0,13,477,67,42,14,3725
+62,sdk-1062-spring-boot-starter,SDK,C#,Testing,Unlicense,Open Source Community,NuGet,Deprecated,2017-04-16,0.949,0.755,1,1,0,1,1,9,62,77,463,30,1758
+63,easy-template-1063-utils,Template,Swift,Testing,ISC,Facebook,Maven Central,Active,2021-09-16,0.824,0.425,0,1,0,1,0,27,240,97,217,10,1697
+64,driver-1064-lib,Driver,TypeScript,Networking,AGPL-3.0,Red Hat,npm,Active,2020-05-16,0.775,0.755,0,1,0,0,1,44,956,28,197,29,4225
+65,simple-ui-components-lib,Library,Scala,UI Components,MPL-2.0,Spring,Maven Central,Experimental,2022-03-16,0.512,0.800,1,0,0,1,0,47,681,74,418,41,4141
+66,simple-template-1066-spring-boot-starter,Template,JavaScript,Code Analysis,BSD-3-Clause,JetBrains,npm,Legacy,2019-03-16,0.926,0.608,0,1,1,0,1,40,9,82,103,16,2934
+67,awesome-serialization-utils,Tool,PHP,Serialization,MIT,Individual Contributors,Maven Central,Experimental,2016-12-16,0.699,0.384,0,0,0,0,0,39,768,58,441,6,1839
+68,light-caching-core,Plugin,Swift,Caching,MPL-2.0,Apache Software Foundation,Maven Central,Deprecated,2016-06-16,0.950,0.343,0,1,0,1,1,5,700,59,123,35,496
+69,light-tool-1069-lib,Tool,C++,Security,Apache-2.0,Apache Software Foundation,Maven Central,Maintained,2019-10-16,0.526,0.506,0,0,0,0,1,24,629,1,406,36,123
+70,micro-tool-1070-lib,Tool,Python,UI Components,Unlicense,University Research,PyPI,Active,2020-04-16,0.564,0.519,0,1,0,0,1,32,549,66,404,23,3244
+71,easy-messaging-api,Framework,Go,Messaging,BSD-3-Clause,Google,Go Modules,Stable,2021-12-16,0.870,0.635,1,1,0,0,1,51,834,92,304,12,568
+72,easy-networking-lib,Driver,Scala,Networking,MPL-2.0,Google,Maven Central,Active,2021-07-16,0.814,0.697,1,1,0,0,1,48,182,79,374,15,3690
+73,easy-driver-1073-utils,Driver,Kotlin,Security,Unlicense,Microsoft,Maven Central,Deprecated,2017-07-16,0.758,0.497,0,1,0,1,1,3,430,97,199,34,2358
+74,fast-api-1074-spring-boot-starter,API,TypeScript,Web Framework,BSD-3-Clause,Spring,npm,Maintained,2018-01-16,0.803,0.659,1,1,1,1,1,16,702,92,377,45,1897
+75,mini-framework-1075-api,Framework,Kotlin,Caching,LGPL-2.1,Eclipse Foundation,Maven Central,Stable,2023-10-16,0.565,0.507,1,0,1,1,1,55,490,93,50,42,190
+76,awesome-networking-utils,Tool,Go,Networking,EPL-2.0,Google,Go Modules,Deprecated,2021-05-16,0.762,0.856,1,0,1,1,1,13,246,72,293,4,4826
+77,easy-sdk-1077-client,SDK,Python,Build Tool,AGPL-3.0,Red Hat,PyPI,Deprecated,2023-01-16,0.849,0.780,1,1,0,0,1,27,13,1,282,22,2096
+78,mini-starter-1078-utils,Starter,Go,Machine Learning,Apache-2.0,Google,Go Modules,Deprecated,2018-08-16,0.944,0.307,0,1,1,0,0,11,757,55,181,22,1029
+79,super-driver-1079-api,Driver,Java,Testing,AGPL-3.0,Apache Software Foundation,Maven Central,Maintained,2020-01-16,0.815,0.302,1,1,1,0,1,35,672,79,354,31,3588
+80,awesome-sdk-1080-core,SDK,Python,Database Driver,BSD-3-Clause,Apache Software Foundation,PyPI,Maintained,2019-12-16,0.652,0.660,0,1,0,0,1,32,364,89,189,33,185
+81,awesome-documentation-utils,Plugin,Go,Documentation,LGPL-2.1,University Research,Go Modules,Experimental,2024-01-16,0.901,0.492,0,0,1,0,0,30,243,85,155,23,3657
+82,fast-machine-learning-api,API,Rust,Machine Learning,AGPL-3.0,Red Hat,Crates.io,Active,2022-04-16,0.886,0.434,0,0,1,1,1,43,147,54,23,23,3679
+83,mini-plugin-1083-client,Plugin,Rust,Networking,Apache-2.0,Amazon,Crates.io,Experimental,2023-02-16,0.988,0.328,0,0,0,0,1,12,766,42,157,12,336
+84,simple-starter-1084-api,Starter,Scala,Testing,Apache-2.0,Spring,Maven Central,Deprecated,2019-05-16,0.617,0.341,1,1,0,0,0,15,817,91,81,30,3790
+85,fast-tool-1085-client,Tool,JavaScript,Big Data,Unlicense,Microsoft,npm,Deprecated,2018-02-16,0.738,0.252,0,0,1,1,1,37,208,70,19,9,1632
+86,template-1086-lib,Template,Python,Serialization,LGPL-2.1,Google,PyPI,Maintained,2023-02-16,0.689,0.775,0,1,0,1,1,6,183,22,47,17,3264
+87,super-library-1087-api,Library,TypeScript,UI Components,MIT,Red Hat,npm,Maintained,2016-08-16,0.554,0.950,1,1,0,1,1,27,97,85,126,22,4266
+88,simple-sdk-1088-client,SDK,Swift,Serialization,AGPL-3.0,University Research,Maven Central,Experimental,2017-07-16,0.836,0.376,0,0,1,1,0,41,892,33,150,34,2266
+89,micro-driver-1089-api,Driver,Rust,Caching,AGPL-3.0,Eclipse Foundation,Crates.io,Active,2017-09-16,0.668,0.306,1,1,0,0,1,45,11,55,273,7,3317
+90,library-1090-core,Library,Java,Networking,BSD-3-Clause,Facebook,Maven Central,Deprecated,2019-01-16,0.839,0.580,0,1,0,0,1,43,313,55,390,27,2487
+91,micro-api-1091-spring-boot-starter,API,Kotlin,Messaging,MPL-2.0,Eclipse Foundation,Maven Central,Active,2023-07-16,0.852,0.533,0,1,0,1,0,49,732,16,65,2,2251
+92,super-starter-1092-client,Starter,Kotlin,Code Analysis,ISC,VMware,Maven Central,Deprecated,2023-07-16,0.794,0.729,0,0,0,0,1,30,974,12,159,30,917
+93,super-logging-client,Driver,PHP,Logging,Apache-2.0,University Research,Maven Central,Legacy,2017-10-16,0.751,0.975,1,1,0,0,0,25,268,13,186,48,329
+94,mini-database-driver-spring-boot-starter,Driver,Swift,Database Driver,Unlicense,Individual Contributors,Maven Central,Stable,2023-03-16,0.689,0.814,0,1,0,1,0,13,996,34,217,0,3795
+95,documentation-core,Starter,C++,Documentation,GPL-3.0,University Research,Maven Central,Maintained,2018-11-16,0.707,0.542,0,0,0,0,1,36,620,97,466,0,889
+96,light-framework-1096-spring-boot-starter,Framework,TypeScript,Caching,BSD-3-Clause,Apache Software Foundation,npm,Active,2023-11-16,0.998,0.438,0,1,0,1,0,48,441,63,286,17,2176
+97,micro-tool-1097,Tool,Python,Serialization,MPL-2.0,Open Source Community,PyPI,Maintained,2023-06-16,0.644,0.403,1,1,1,0,1,28,394,65,368,31,4052
+98,simple-plugin-1098-lib,Plugin,Scala,Testing,Unlicense,Open Source Community,Maven Central,Maintained,2019-01-16,0.605,0.826,0,1,0,1,1,14,912,21,249,34,64
+99,light-starter-1099-client,Starter,C++,Logging,Unlicense,JetBrains,Maven Central,Active,2017-05-16,0.593,0.574,1,1,0,0,1,16,680,8,8,4,3057
+100,super-machine-learning-client,Plugin,Rust,Machine Learning,ISC,Spring,Crates.io,Stable,2023-04-16,0.829,1.000,0,1,0,0,1,38,727,35,145,42,3066
+101,light-library-1101,Library,C#,Machine Learning,ISC,University Research,NuGet,Stable,2016-10-16,0.926,0.774,1,1,1,0,1,41,159,4,445,2,624
+102,mini-starter-1102-spring-boot-starter,Starter,Rust,Caching,GPL-3.0,University Research,Crates.io,Legacy,2021-01-16,0.645,0.598,0,1,1,0,0,22,958,81,387,7,3391
+103,fast-database-driver-utils,Middleware,Swift,Database Driver,MIT,Individual Contributors,Maven Central,Active,2019-11-16,0.633,0.678,0,1,1,0,0,49,620,64,175,35,2492
+104,simple-middleware-1104-lib,Middleware,Java,Code Analysis,LGPL-2.1,Eclipse Foundation,Maven Central,Stable,2016-09-16,0.731,0.639,1,0,0,1,1,14,443,89,131,13,2147
+105,micro-starter-1105-lib,Starter,Java,Utilities,LGPL-2.1,Individual Contributors,Maven Central,Stable,2017-08-16,0.819,0.960,0,1,0,1,1,27,853,45,223,16,3402
+106,super-plugin-1106,Plugin,Python,Testing,Unlicense,Spring,PyPI,Stable,2017-01-16,0.755,0.769,0,1,1,0,1,28,653,55,437,6,14
+107,awesome-driver-1107-utils,Driver,PHP,Documentation,MIT,Amazon,Maven Central,Legacy,2022-11-16,0.783,0.729,1,1,1,0,0,36,311,3,359,12,1323
+108,tool-1108,Tool,Java,UI Components,GPL-3.0,Facebook,Maven Central,Deprecated,2021-08-16,0.953,0.627,0,1,0,0,1,35,440,13,74,6,957
+109,awesome-template-1109-client,Template,C++,Big Data,Apache-2.0,Amazon,Maven Central,Stable,2019-04-16,0.869,0.675,0,0,1,0,0,26,483,90,165,7,1224
+110,awesome-build-tool-spring-boot-starter,Plugin,Rust,Build Tool,GPL-3.0,Amazon,Crates.io,Active,2024-01-16,0.523,0.595,0,0,1,0,1,41,860,65,381,22,3408
+111,micro-api-1111-core,API,Ruby,UI Components,ISC,Apache Software Foundation,RubyGems,Deprecated,2022-12-16,0.952,0.715,0,1,1,0,0,1,24,42,318,32,4976
+112,awesome-template-1112-client,Template,Go,UI Components,EPL-2.0,University Research,Go Modules,Active,2020-04-16,0.978,0.339,0,1,0,0,1,27,27,1,151,31,1062
+113,super-plugin-1113-core,Plugin,Ruby,Machine Learning,Apache-2.0,Amazon,RubyGems,Experimental,2023-03-16,0.783,0.344,1,0,1,0,1,29,999,3,445,23,3132
+114,light-framework-1114-client,Framework,PHP,Web Framework,Unlicense,University Research,Maven Central,Legacy,2021-09-16,0.553,0.542,1,1,1,0,1,26,90,39,360,33,3824
+115,simple-api-1115-client,API,Ruby,UI Components,LGPL-2.1,VMware,RubyGems,Experimental,2017-02-16,0.761,0.134,0,0,0,0,1,2,935,76,56,35,1246
+116,micro-ui-components-lib,SDK,Python,UI Components,LGPL-2.1,Apache Software Foundation,PyPI,Legacy,2020-05-16,0.948,0.988,0,0,0,0,0,43,571,7,477,23,2279
+117,super-ui-components-core,Driver,Swift,UI Components,Unlicense,JetBrains,Maven Central,Legacy,2022-03-16,0.964,0.385,0,0,1,0,0,28,375,8,87,15,2943
+118,library-1118-spring-boot-starter,Library,PHP,Serialization,Unlicense,Google,Maven Central,Maintained,2016-07-16,0.813,0.512,1,0,0,0,0,13,50,95,147,5,2254
+119,fast-logging-api,Library,C#,Logging,AGPL-3.0,Facebook,NuGet,Active,2016-03-16,0.967,0.382,0,0,1,1,0,18,780,98,230,24,123
+120,awesome-plugin-1120,Plugin,C#,Serialization,MPL-2.0,Eclipse Foundation,NuGet,Active,2023-10-16,0.695,0.699,1,1,1,0,1,21,625,0,32,37,1406
+121,micro-tool-1121-api,Tool,Go,UI Components,Apache-2.0,Eclipse Foundation,Go Modules,Active,2017-11-16,0.597,0.358,0,1,1,1,0,11,94,35,198,3,3195
+122,simple-machine-learning-utils,API,PHP,Machine Learning,Apache-2.0,University Research,Maven Central,Maintained,2022-12-16,0.821,0.838,0,0,0,1,0,34,78,93,179,29,3005
+123,mini-serialization-utils,Starter,Swift,Serialization,MIT,Microsoft,Maven Central,Deprecated,2020-03-16,0.870,0.675,0,1,1,0,1,20,716,52,24,28,1425
+124,light-library-1124-utils,Library,Go,Build Tool,Unlicense,Apache Software Foundation,Go Modules,Active,2019-05-16,0.851,0.519,0,0,1,1,1,2,638,78,216,20,4682
+125,simple-documentation-spring-boot-starter,Middleware,PHP,Documentation,AGPL-3.0,Apache Software Foundation,Maven Central,Experimental,2022-10-16,0.913,0.751,0,0,0,0,1,47,671,77,151,11,718
+126,super-middleware-1126-spring-boot-starter,Middleware,C++,Documentation,MIT,Individual Contributors,Maven Central,Deprecated,2016-10-16,0.620,0.297,0,1,0,0,1,4,636,27,406,14,4102
+127,fast-middleware-1127-client,Middleware,TypeScript,Utilities,MIT,Facebook,npm,Stable,2020-09-16,0.522,0.689,0,1,0,0,1,28,127,90,492,1,537
+128,fast-ui-components-api,Framework,JavaScript,UI Components,BSD-3-Clause,JetBrains,npm,Experimental,2017-10-16,0.659,0.130,1,0,1,0,1,35,398,13,73,43,2361
+129,easy-sdk-1129-lib,SDK,Swift,Serialization,ISC,VMware,Maven Central,Legacy,2016-07-16,0.755,0.307,1,0,0,0,1,34,747,67,186,17,4587
+130,awesome-tool-1130-api,Tool,Ruby,UI Components,AGPL-3.0,Open Source Community,RubyGems,Experimental,2018-12-16,0.643,0.386,0,0,1,0,0,21,699,83,390,4,3869
+131,middleware-1131-client,Middleware,Python,Testing,EPL-2.0,VMware,PyPI,Maintained,2021-11-16,0.533,0.449,0,1,1,0,1,34,867,56,143,33,2285
+132,easy-starter-1132-core,Starter,Rust,Serialization,MPL-2.0,Microsoft,Crates.io,Deprecated,2020-04-16,0.714,0.449,0,1,1,1,1,14,870,96,182,49,399
+133,easy-template-1133-lib,Template,C++,Security,MIT,Red Hat,Maven Central,Legacy,2023-11-16,0.961,0.928,0,0,1,0,1,49,56,52,171,16,4175
+134,mini-framework-1134-client,Framework,Swift,Database Driver,MIT,Red Hat,Maven Central,Maintained,2020-11-16,0.590,0.563,0,0,1,1,1,24,665,78,56,5,1755
+135,super-big-data-spring-boot-starter,Library,PHP,Big Data,MPL-2.0,Red Hat,Maven Central,Active,2017-11-16,0.713,0.653,0,0,0,1,1,22,864,20,188,34,4217
+136,light-plugin-1136-client,Plugin,Java,Web Framework,Unlicense,Individual Contributors,Maven Central,Active,2023-07-16,0.632,0.621,1,1,1,0,1,47,454,30,74,42,1216
+137,easy-template-1137-api,Template,Swift,Big Data,MIT,University Research,Maven Central,Experimental,2020-11-16,0.852,0.187,0,0,0,0,0,28,445,76,265,8,1979
+138,easy-plugin-1138-client,Plugin,Rust,Documentation,ISC,Microsoft,Crates.io,Active,2022-12-16,0.525,0.694,0,0,0,0,0,10,905,43,343,33,1590
+139,mini-library-1139-utils,Library,Ruby,Machine Learning,MIT,Individual Contributors,RubyGems,Stable,2024-01-16,0.629,0.553,0,0,1,0,1,23,136,95,50,9,629
+140,easy-template-1140,Template,C++,Big Data,AGPL-3.0,Facebook,Maven Central,Stable,2023-02-16,0.617,0.570,0,1,0,1,1,60,284,91,60,36,2557
+141,simple-template-1141-api,Template,Rust,Caching,MPL-2.0,Open Source Community,Crates.io,Deprecated,2021-12-16,0.782,0.526,1,1,0,0,1,36,466,48,463,9,1632
+142,micro-api-1142-client,API,PHP,Machine Learning,Unlicense,Spring,Maven Central,Experimental,2019-10-16,0.605,0.442,0,0,0,1,1,5,805,17,448,20,468
+143,plugin-1143,Plugin,Go,Machine Learning,MIT,Open Source Community,Go Modules,Experimental,2018-04-16,0.807,0.398,0,0,1,1,1,45,90,66,407,17,1356
+144,awesome-driver-1144-utils,Driver,TypeScript,Database Driver,MPL-2.0,Red Hat,npm,Deprecated,2021-03-16,0.887,0.733,0,0,0,0,1,6,812,1,80,25,2100
+145,awesome-driver-1145-lib,Driver,C#,UI Components,Apache-2.0,Amazon,NuGet,Active,2019-02-16,0.869,0.899,0,1,1,1,1,50,305,63,371,43,752
+146,fast-messaging-api,Plugin,TypeScript,Messaging,ISC,Apache Software Foundation,npm,Deprecated,2016-09-16,0.530,0.502,1,1,0,1,1,29,555,15,311,29,4316
+147,super-api-1147-core,API,Kotlin,Big Data,ISC,Eclipse Foundation,Maven Central,Experimental,2018-05-16,0.838,0.387,0,0,1,0,0,43,694,46,346,25,949
+148,template-1148-spring-boot-starter,Template,TypeScript,Web Framework,GPL-3.0,Facebook,npm,Stable,2018-01-16,0.872,0.920,0,1,1,0,1,60,592,63,446,24,1533
+149,mini-sdk-1149-client,SDK,JavaScript,Machine Learning,AGPL-3.0,Open Source Community,npm,Maintained,2017-09-16,0.952,0.807,0,0,1,1,1,26,578,59,217,9,3402
+150,mini-plugin-1150-lib,Plugin,Java,Messaging,ISC,Individual Contributors,Maven Central,Active,2022-02-16,0.745,0.518,1,1,0,0,1,46,283,17,181,10,3967
+151,fast-template-1151-api,Template,C++,Networking,ISC,Spring,Maven Central,Deprecated,2020-11-16,0.596,0.837,0,0,0,1,1,5,429,83,95,5,1368
+152,light-template-1152,Template,Python,UI Components,AGPL-3.0,JetBrains,PyPI,Stable,2017-05-16,0.819,0.622,1,1,1,1,1,32,77,81,0,2,1921
+153,easy-driver-1153-api,Driver,JavaScript,Messaging,GPL-3.0,VMware,npm,Legacy,2022-11-16,0.720,0.499,0,0,0,0,1,33,143,96,294,32,4583
+154,simple-caching-api,API,Python,Caching,GPL-3.0,JetBrains,PyPI,Maintained,2022-07-16,0.607,0.618,0,1,1,1,1,1,702,42,360,6,3586
+155,mini-big-data-api,Middleware,C#,Big Data,MPL-2.0,VMware,NuGet,Maintained,2019-02-16,0.678,0.628,0,0,1,1,1,45,75,64,298,18,1789
+156,super-tool-1156-client,Tool,Kotlin,Documentation,ISC,Google,Maven Central,Stable,2017-10-16,0.991,0.738,1,1,0,0,1,55,659,34,168,39,464
+157,fast-starter-1157-client,Starter,Scala,Big Data,MPL-2.0,Microsoft,Maven Central,Legacy,2018-06-16,0.532,0.690,0,0,0,0,1,36,657,92,250,15,3687
+158,simple-plugin-1158-spring-boot-starter,Plugin,Go,Database Driver,Unlicense,Facebook,Go Modules,Experimental,2017-02-16,0.803,0.575,0,0,0,0,0,26,748,25,107,8,4271
+159,super-logging,Driver,Java,Logging,MPL-2.0,Individual Contributors,Maven Central,Maintained,2021-04-16,0.886,0.431,0,1,0,0,1,39,406,45,119,8,1693
+160,micro-driver-1160-client,Driver,C#,Networking,Apache-2.0,JetBrains,NuGet,Stable,2016-09-16,0.974,0.885,0,0,1,0,1,36,17,54,59,37,2037
+161,simple-api-1161-lib,API,Kotlin,Messaging,Apache-2.0,Facebook,Maven Central,Maintained,2020-06-16,0.975,0.834,0,1,0,0,1,13,816,81,276,3,1053
+162,light-library-1162-spring-boot-starter,Library,JavaScript,Build Tool,Apache-2.0,JetBrains,npm,Experimental,2020-06-16,0.918,0.683,0,0,0,1,1,11,862,96,330,45,735
+163,simple-ui-components-utils,Starter,Ruby,UI Components,MIT,Spring,RubyGems,Stable,2018-08-16,0.859,1.000,1,0,0,1,0,41,641,92,144,30,471
+164,simple-logging-api,Middleware,Kotlin,Logging,ISC,Apache Software Foundation,Maven Central,Stable,2022-11-16,0.801,0.503,0,1,1,0,1,21,221,46,158,41,3091
+165,super-plugin-1165,Plugin,JavaScript,Database Driver,AGPL-3.0,Amazon,npm,Deprecated,2022-05-16,0.852,0.339,1,1,0,1,0,2,316,48,284,20,4397
+166,micro-driver-1166-core,Driver,Go,Messaging,MIT,Open Source Community,Go Modules,Legacy,2019-12-16,0.893,0.871,0,0,0,0,1,47,211,48,287,29,721
+167,simple-big-data-lib,API,C#,Big Data,Apache-2.0,University Research,NuGet,Deprecated,2016-05-16,0.545,0.795,0,0,0,0,0,38,99,19,1,36,2984
+168,easy-sdk-1168-client,SDK,Go,Utilities,Unlicense,Facebook,Go Modules,Maintained,2018-12-16,0.707,0.918,0,1,0,1,0,31,946,28,386,13,822
+169,mini-driver-1169-spring-boot-starter,Driver,Swift,Machine Learning,LGPL-2.1,Microsoft,Maven Central,Deprecated,2017-12-16,0.730,0.679,0,0,0,0,1,22,399,91,215,3,1175
+170,light-driver-1170,Driver,Go,Security,ISC,Red Hat,Go Modules,Legacy,2022-02-16,0.860,0.705,0,0,1,0,0,37,851,1,270,5,24
+171,fast-ui-components-api,Plugin,Rust,UI Components,GPL-3.0,Red Hat,Crates.io,Maintained,2019-02-16,0.979,0.642,0,0,1,0,1,24,524,56,52,6,3907
+172,fast-starter-1172-core,Starter,C++,Serialization,AGPL-3.0,Open Source Community,Maven Central,Active,2021-03-16,0.529,0.327,0,0,0,1,0,1,974,23,377,15,3604
+173,micro-framework-1173-api,Framework,Python,Logging,ISC,Individual Contributors,PyPI,Deprecated,2022-02-16,0.898,0.367,1,0,0,0,0,19,300,82,464,45,921
+174,fast-plugin-1174,Plugin,Kotlin,Code Analysis,ISC,Microsoft,Maven Central,Legacy,2021-03-16,0.511,0.455,1,0,1,0,0,48,554,98,22,43,3893
+175,fast-plugin-1175-core,Plugin,Rust,Security,MIT,JetBrains,Crates.io,Maintained,2022-05-16,0.870,0.691,0,0,0,0,1,24,84,37,486,30,1987
+176,light-networking-lib,Starter,Ruby,Networking,GPL-3.0,Eclipse Foundation,RubyGems,Experimental,2017-12-16,0.807,0.544,0,0,1,1,0,36,543,14,109,3,953
+177,mini-framework-1177-api,Framework,Go,Database Driver,AGPL-3.0,Eclipse Foundation,Go Modules,Active,2019-10-16,0.683,0.708,0,0,0,0,1,7,183,54,183,10,4137
+178,logging-lib,Driver,Ruby,Logging,GPL-3.0,Apache Software Foundation,RubyGems,Maintained,2019-04-16,0.803,0.517,1,1,0,1,1,47,703,63,448,6,1161
+179,awesome-sdk-1179-spring-boot-starter,SDK,Swift,Web Framework,AGPL-3.0,Individual Contributors,Maven Central,Active,2017-05-16,0.778,0.338,0,0,0,1,1,40,387,20,151,16,3467
+180,super-framework-1180-client,Framework,Swift,Testing,EPL-2.0,Facebook,Maven Central,Legacy,2017-03-16,0.591,0.326,0,0,1,0,0,44,664,33,201,49,876
+181,fast-machine-learning,Library,JavaScript,Machine Learning,LGPL-2.1,Red Hat,npm,Active,2022-01-16,0.836,0.769,0,1,0,1,1,11,341,51,256,12,4116
+182,simple-testing-api,Starter,Rust,Testing,ISC,Spring,Crates.io,Maintained,2017-06-16,0.917,0.585,1,0,0,1,1,5,84,77,103,13,1022
+183,simple-driver-1183-core,Driver,Python,Security,ISC,Open Source Community,PyPI,Maintained,2020-06-16,0.851,0.304,0,1,0,0,1,3,298,17,445,42,4394
+184,mini-driver-1184-client,Driver,Kotlin,Serialization,EPL-2.0,VMware,Maven Central,Legacy,2021-05-16,0.837,0.455,0,0,0,0,1,12,882,2,42,44,4130
+185,mini-plugin-1185-core,Plugin,Ruby,Messaging,Apache-2.0,Facebook,RubyGems,Experimental,2017-11-16,0.690,0.217,1,0,1,1,1,36,373,53,340,41,844
+186,mini-tool-1186,Tool,Java,Database Driver,ISC,VMware,Maven Central,Active,2020-11-16,0.660,0.334,0,0,0,1,0,32,812,79,322,25,1177
+187,sdk-1187-api,SDK,Go,UI Components,BSD-3-Clause,Spring,Go Modules,Experimental,2021-09-16,0.898,0.270,0,0,0,1,1,26,285,77,346,9,1678
+188,mini-ui-components,SDK,Ruby,UI Components,Apache-2.0,Amazon,RubyGems,Maintained,2021-07-16,0.933,0.934,0,1,0,0,0,19,886,73,119,7,818
+189,light-big-data-lib,Tool,PHP,Big Data,ISC,Spring,Maven Central,Stable,2023-03-16,0.868,0.849,1,0,0,0,1,30,97,61,145,33,1662
+190,micro-driver-1190-client,Driver,JavaScript,Security,Apache-2.0,VMware,npm,Experimental,2016-07-16,0.799,0.740,0,0,1,1,0,15,987,78,369,19,3128
+191,easy-library-1191-spring-boot-starter,Library,PHP,Big Data,GPL-3.0,VMware,Maven Central,Active,2018-06-16,0.960,0.470,0,0,0,0,1,23,464,83,73,20,1404
+192,fast-build-tool,Framework,TypeScript,Build Tool,Unlicense,VMware,npm,Maintained,2021-12-16,0.862,0.759,0,1,0,1,1,42,996,74,143,2,1892
+193,mini-api-1193-utils,API,Rust,Networking,EPL-2.0,Spring,Crates.io,Experimental,2023-01-16,0.664,0.746,1,0,0,0,0,31,339,49,98,26,2150
+194,simple-framework-1194,Framework,Kotlin,Code Analysis,AGPL-3.0,Spring,Maven Central,Deprecated,2023-05-16,0.531,0.244,0,1,0,1,1,16,81,65,138,24,4934
+195,library-1195-spring-boot-starter,Library,Java,Serialization,Unlicense,Apache Software Foundation,Maven Central,Stable,2017-04-16,0.732,0.931,0,0,1,1,1,38,658,90,203,0,3055
+196,mini-library-1196-client,Library,Kotlin,Caching,LGPL-2.1,University Research,Maven Central,Stable,2016-11-16,0.718,0.532,0,1,1,0,0,33,17,83,97,39,829
+197,micro-api-1197-spring-boot-starter,API,Swift,Security,GPL-3.0,Eclipse Foundation,Maven Central,Active,2019-12-16,0.939,0.843,1,1,1,0,1,30,164,66,37,33,2741
+198,simple-library-1198-spring-boot-starter,Library,Go,Machine Learning,Apache-2.0,Apache Software Foundation,Go Modules,Active,2021-04-16,0.652,0.544,0,1,0,1,1,21,997,9,93,25,1402
+199,tool-1199-client,Tool,C++,Serialization,MPL-2.0,Facebook,Maven Central,Deprecated,2017-08-16,0.960,0.353,0,1,1,1,0,6,386,53,231,16,3265
+200,super-tool-1200-core,Tool,Rust,Machine Learning,Apache-2.0,Open Source Community,Crates.io,Experimental,2018-03-16,0.834,0.572,0,0,0,1,1,5,533,45,274,26,1205
+201,super-web-framework-client,Template,Kotlin,Web Framework,MPL-2.0,Google,Maven Central,Stable,2019-09-16,0.884,0.764,0,0,1,0,1,18,227,75,374,31,3635
+202,simple-library-1202-core,Library,PHP,Machine Learning,Apache-2.0,Google,Maven Central,Maintained,2017-01-16,0.602,0.336,0,1,0,0,1,29,32,69,115,15,485
+203,easy-driver-1203-spring-boot-starter,Driver,TypeScript,Networking,Apache-2.0,JetBrains,npm,Active,2019-05-16,0.848,0.848,0,1,1,0,1,27,768,52,98,24,4650
+204,fast-middleware-1204-utils,Middleware,Ruby,Logging,MPL-2.0,Red Hat,RubyGems,Maintained,2019-08-16,0.827,0.618,0,1,0,1,0,39,527,84,85,2,3251
+205,easy-messaging-utils,Driver,Python,Messaging,AGPL-3.0,University Research,PyPI,Experimental,2017-07-16,0.790,0.671,0,0,0,1,1,40,681,12,22,19,1006
+206,light-middleware-1206-client,Middleware,JavaScript,Machine Learning,AGPL-3.0,JetBrains,npm,Legacy,2020-04-16,0.736,0.768,0,1,1,0,0,43,426,90,240,37,303
+207,micro-plugin-1207-core,Plugin,Scala,Utilities,ISC,Amazon,Maven Central,Experimental,2023-08-16,0.836,0.587,0,0,0,0,0,42,909,68,427,24,1609
+208,mini-api-1208,API,Rust,Serialization,LGPL-2.1,Individual Contributors,Crates.io,Maintained,2016-12-16,0.856,0.586,0,1,1,1,1,24,768,59,155,35,3176
+209,simple-plugin-1209-client,Plugin,Python,Documentation,Unlicense,JetBrains,PyPI,Legacy,2018-06-16,0.807,0.808,0,1,1,0,0,31,261,7,224,13,793
+210,awesome-starter-1210-spring-boot-starter,Starter,Go,Machine Learning,EPL-2.0,Open Source Community,Go Modules,Maintained,2019-08-16,0.587,0.781,0,1,0,1,1,16,97,87,235,2,1703
+211,super-template-1211-lib,Template,JavaScript,Security,AGPL-3.0,Spring,npm,Stable,2016-05-16,0.855,1.000,1,0,1,1,1,13,153,80,194,13,1814
+212,easy-plugin-1212-core,Plugin,Kotlin,Documentation,LGPL-2.1,Amazon,Maven Central,Legacy,2017-12-16,0.895,0.606,0,1,0,0,1,17,303,94,135,32,3427
+213,light-library-1213,Library,Java,Web Framework,AGPL-3.0,Microsoft,Maven Central,Experimental,2020-08-16,0.537,0.405,0,0,1,0,1,32,189,55,101,44,4837
+214,easy-plugin-1214,Plugin,Rust,Testing,MPL-2.0,VMware,Crates.io,Experimental,2021-10-16,0.685,0.560,0,0,0,1,1,46,340,22,489,33,3897
+215,simple-networking-lib,Tool,Java,Networking,EPL-2.0,Open Source Community,Maven Central,Active,2023-01-16,0.550,0.908,0,1,1,0,0,2,636,86,66,11,2466
+216,micro-logging,Driver,PHP,Logging,ISC,Apache Software Foundation,Maven Central,Legacy,2016-09-16,0.554,0.595,0,0,1,0,0,26,762,81,69,28,3738
+217,micro-messaging-core,Template,JavaScript,Messaging,MPL-2.0,Amazon,npm,Active,2020-05-16,0.966,0.501,0,1,1,0,0,35,328,54,33,32,2606
+218,super-machine-learning-api,Middleware,C#,Machine Learning,ISC,Google,NuGet,Legacy,2022-11-16,0.768,0.457,0,1,0,0,0,42,788,73,242,44,226
+219,fast-framework-1219-api,Framework,C++,Logging,Unlicense,Open Source Community,Maven Central,Maintained,2018-11-16,0.980,0.912,0,0,0,0,0,39,725,86,205,1,2106
+220,awesome-machine-learning-api,Template,C#,Machine Learning,Apache-2.0,Amazon,NuGet,Legacy,2020-12-16,0.960,0.564,0,0,0,0,1,8,453,19,328,14,324
+221,super-big-data-spring-boot-starter,Starter,Kotlin,Big Data,ISC,Eclipse Foundation,Maven Central,Deprecated,2016-09-16,0.901,0.609,0,1,1,0,1,34,898,47,270,24,1828
+222,super-tool-1222-spring-boot-starter,Tool,TypeScript,Caching,GPL-3.0,Google,npm,Maintained,2017-05-16,0.714,0.971,1,0,0,1,1,24,28,84,72,1,1551
+223,fast-sdk-1223-api,SDK,Java,Messaging,ISC,Microsoft,Maven Central,Stable,2023-08-16,0.716,1.000,0,1,0,1,1,42,250,68,262,44,4649
+224,super-driver-1224-client,Driver,Scala,Build Tool,Unlicense,Microsoft,Maven Central,Deprecated,2019-12-16,0.706,0.646,1,0,0,0,0,20,608,6,372,12,3917
+225,awesome-library-1225-api,Library,Java,Caching,LGPL-2.1,JetBrains,Maven Central,Deprecated,2019-04-16,0.810,0.719,1,1,1,1,0,17,481,87,22,12,464
+226,easy-build-tool-utils,Framework,JavaScript,Build Tool,ISC,Google,npm,Stable,2022-09-16,0.687,0.933,1,0,1,1,0,20,241,71,271,18,3924
+227,fast-template-1227,Template,C++,Utilities,MPL-2.0,Red Hat,Maven Central,Legacy,2017-01-16,0.583,0.983,0,1,0,0,0,49,86,49,149,15,2087
+228,mini-starter-1228-api,Starter,C++,Database Driver,ISC,JetBrains,Maven Central,Maintained,2016-05-16,0.922,0.797,1,0,0,0,1,9,626,41,303,8,815
+229,fast-starter-1229-spring-boot-starter,Starter,PHP,Build Tool,Apache-2.0,University Research,Maven Central,Legacy,2022-06-16,0.640,0.411,0,1,0,0,0,36,756,70,402,0,850
+230,simple-library-1230-client,Library,PHP,Code Analysis,Apache-2.0,Amazon,Maven Central,Legacy,2022-10-16,0.874,0.542,0,1,1,0,0,46,91,22,430,29,3405
+231,mini-library-1231-client,Library,TypeScript,Caching,AGPL-3.0,Spring,npm,Deprecated,2018-09-16,0.513,0.464,0,0,0,0,0,39,929,28,297,15,3139
+232,light-starter-1232-utils,Starter,Go,Code Analysis,Apache-2.0,Facebook,Go Modules,Experimental,2016-11-16,0.771,0.768,0,0,0,0,1,11,647,76,338,36,4199
+233,micro-middleware-1233,Middleware,TypeScript,Code Analysis,LGPL-2.1,Google,npm,Deprecated,2020-09-16,0.682,0.707,0,1,0,1,1,17,395,42,319,9,719
+234,awesome-middleware-1234,Middleware,Ruby,Code Analysis,Unlicense,Open Source Community,RubyGems,Experimental,2021-11-16,0.500,0.374,0,0,0,0,1,41,289,30,141,41,720
+235,simple-tool-1235-spring-boot-starter,Tool,Scala,UI Components,Unlicense,Individual Contributors,Maven Central,Legacy,2018-04-16,0.657,0.895,0,0,0,0,0,8,998,92,120,30,1854
+236,micro-template-1236-utils,Template,Kotlin,Caching,EPL-2.0,Google,Maven Central,Deprecated,2021-04-16,0.770,0.385,1,1,1,1,1,27,253,1,19,37,733
+237,super-api-1237-api,API,TypeScript,Utilities,MPL-2.0,Facebook,npm,Maintained,2019-04-16,0.718,0.981,0,1,0,1,1,14,818,56,391,48,992
+238,super-code-analysis-lib,Library,JavaScript,Code Analysis,Unlicense,Amazon,npm,Stable,2016-08-16,0.553,0.985,0,1,0,0,1,34,130,21,232,38,4621
+239,mini-tool-1239,Tool,PHP,Messaging,BSD-3-Clause,Spring,Maven Central,Legacy,2016-07-16,0.990,0.692,1,1,0,0,0,9,281,84,389,44,1078
+240,light-framework-1240-spring-boot-starter,Framework,Java,Testing,Unlicense,Apache Software Foundation,Maven Central,Experimental,2020-12-16,0.736,0.770,0,0,1,1,1,5,103,13,181,1,3347
+241,awesome-plugin-1241-utils,Plugin,JavaScript,Utilities,ISC,Facebook,npm,Deprecated,2018-09-16,0.624,0.246,0,1,0,0,0,20,426,74,16,41,4966
+242,super-framework-1242,Framework,Python,Machine Learning,MPL-2.0,Red Hat,PyPI,Stable,2023-10-16,0.556,0.750,0,0,0,0,0,35,89,46,273,1,4135
+243,micro-driver-1243-api,Driver,Ruby,Machine Learning,GPL-3.0,Eclipse Foundation,RubyGems,Stable,2016-05-16,0.997,1.000,1,1,0,1,1,60,809,86,174,39,2732
+244,middleware-1244-api,Middleware,Java,Testing,GPL-3.0,Open Source Community,Maven Central,Maintained,2019-09-16,0.566,0.743,0,0,0,0,0,7,110,9,104,30,2192
+245,super-library-1245-core,Library,Kotlin,Serialization,GPL-3.0,Open Source Community,Maven Central,Experimental,2017-11-16,0.755,0.250,0,0,1,0,1,10,363,36,283,44,455
+246,security-core,API,Ruby,Security,ISC,Amazon,RubyGems,Legacy,2019-06-16,0.797,0.923,0,1,0,0,0,29,237,50,3,14,2549
+247,utilities-api,Library,Go,Utilities,AGPL-3.0,Amazon,Go Modules,Legacy,2016-06-16,0.743,0.858,0,1,0,0,0,49,212,35,30,15,1027
+248,light-middleware-1248-core,Middleware,Python,Build Tool,MPL-2.0,Microsoft,PyPI,Maintained,2017-09-16,0.741,0.882,0,1,0,0,1,49,879,9,457,43,3994
+249,micro-library-1249-api,Library,Ruby,Machine Learning,AGPL-3.0,Amazon,RubyGems,Maintained,2023-05-16,0.507,0.585,1,0,0,1,0,37,194,44,106,41,1920
+250,micro-library-1250-client,Library,Swift,Networking,EPL-2.0,Amazon,Maven Central,Active,2018-12-16,0.836,0.514,0,1,0,1,1,39,941,10,199,18,3456
+251,mini-framework-1251-utils,Framework,Rust,UI Components,GPL-3.0,Eclipse Foundation,Crates.io,Experimental,2017-06-16,0.834,0.103,1,0,0,1,1,5,955,29,83,46,2686
+252,mini-framework-1252-spring-boot-starter,Framework,Swift,Serialization,Unlicense,Individual Contributors,Maven Central,Deprecated,2019-03-16,0.758,0.276,0,0,1,0,0,10,592,76,290,21,485
+253,simple-plugin-1253-lib,Plugin,C++,Utilities,GPL-3.0,Eclipse Foundation,Maven Central,Experimental,2023-03-16,0.644,0.422,0,0,0,0,1,5,585,98,165,18,2210
+254,fast-library-1254-api,Library,Swift,UI Components,EPL-2.0,JetBrains,Maven Central,Stable,2019-06-16,0.625,1.000,0,0,1,0,1,57,56,45,111,47,2128
+255,mini-caching-spring-boot-starter,Framework,Ruby,Caching,AGPL-3.0,Amazon,RubyGems,Deprecated,2021-03-16,0.683,0.853,1,1,1,0,0,32,523,87,113,41,3052
+256,mini-library-1256,Library,PHP,Networking,MIT,Eclipse Foundation,Maven Central,Active,2021-08-16,0.599,0.776,0,0,0,1,0,39,812,54,206,25,2842
+257,ui-components-lib,Starter,Scala,UI Components,EPL-2.0,JetBrains,Maven Central,Active,2019-11-16,0.832,0.371,0,0,0,0,0,28,785,1,186,23,4630
+258,micro-driver-1258-utils,Driver,Kotlin,Messaging,ISC,JetBrains,Maven Central,Active,2020-05-16,0.600,0.661,1,0,0,0,0,10,989,48,10,2,2971
+259,awesome-ui-components-api,Plugin,C++,UI Components,ISC,University Research,Maven Central,Legacy,2017-10-16,0.885,0.306,0,1,1,0,0,27,749,18,41,36,2086
+260,easy-framework-1260-api,Framework,Rust,UI Components,GPL-3.0,Red Hat,Crates.io,Experimental,2016-09-16,0.644,0.454,0,0,0,1,1,22,75,57,232,34,1658
+261,micro-starter-1261-core,Starter,Scala,Logging,GPL-3.0,Individual Contributors,Maven Central,Stable,2016-04-16,0.949,0.612,0,0,0,0,0,37,196,84,150,9,1612
+262,micro-library-1262-core,Library,Ruby,UI Components,Unlicense,Google,RubyGems,Stable,2020-01-16,0.814,0.849,1,0,1,1,1,46,541,23,199,35,4448
+263,fast-sdk-1263-utils,SDK,Go,Testing,MPL-2.0,Amazon,Go Modules,Experimental,2021-06-16,0.975,0.709,0,0,1,0,1,43,409,98,428,36,1553
+264,mini-driver-1264-lib,Driver,C#,Big Data,LGPL-2.1,Microsoft,NuGet,Legacy,2018-05-16,0.844,0.768,0,0,1,0,0,48,972,13,28,1,724
+265,micro-template-1265-lib,Template,Scala,Code Analysis,AGPL-3.0,Open Source Community,Maven Central,Deprecated,2017-03-16,0.911,0.795,0,1,0,1,1,44,442,64,480,3,365
+266,fast-sdk-1266-core,SDK,Ruby,Testing,GPL-3.0,Spring,RubyGems,Stable,2020-03-16,0.836,0.660,0,0,1,1,1,59,271,15,35,32,2191
+267,awesome-tool-1267-client,Tool,Kotlin,Web Framework,Unlicense,Apache Software Foundation,Maven Central,Legacy,2021-03-16,0.976,0.340,0,1,1,0,1,32,744,62,493,25,4671
+268,mini-starter-1268-client,Starter,Swift,Serialization,GPL-3.0,Spring,Maven Central,Maintained,2022-08-16,0.701,0.507,0,0,0,0,1,22,375,26,321,41,580
+269,template-1269-api,Template,Java,Testing,MPL-2.0,Facebook,Maven Central,Stable,2022-11-16,0.895,0.845,0,0,0,1,1,41,68,84,364,18,3665
+270,simple-tool-1270-core,Tool,Scala,Logging,MIT,VMware,Maven Central,Experimental,2021-09-16,0.825,0.784,0,0,0,1,1,10,393,80,177,22,3748
+271,micro-sdk-1271-lib,SDK,C++,Security,EPL-2.0,JetBrains,Maven Central,Active,2020-01-16,0.516,0.308,0,1,1,0,0,3,585,48,336,16,2505
+272,awesome-security-spring-boot-starter,Plugin,Kotlin,Security,ISC,University Research,Maven Central,Deprecated,2021-07-16,0.563,0.683,0,1,0,0,1,42,880,11,484,9,4188
+273,mini-documentation-api,Library,TypeScript,Documentation,LGPL-2.1,Individual Contributors,npm,Maintained,2022-09-16,0.522,0.930,0,1,0,0,1,16,299,85,438,40,3801
+274,light-networking-api,Starter,TypeScript,Networking,Unlicense,JetBrains,npm,Deprecated,2016-09-16,0.705,0.688,0,0,0,0,1,36,750,26,70,34,1764
+275,mini-plugin-1275-core,Plugin,Ruby,Web Framework,GPL-3.0,Spring,RubyGems,Deprecated,2022-11-16,0.607,0.648,0,1,0,1,0,17,147,7,207,42,3112
+276,awesome-driver-1276-spring-boot-starter,Driver,Swift,Serialization,GPL-3.0,Red Hat,Maven Central,Stable,2022-12-16,0.735,0.890,0,1,1,1,0,38,560,27,258,19,4666
+277,mini-api-1277-client,API,C++,Networking,EPL-2.0,Spring,Maven Central,Deprecated,2017-08-16,0.572,0.382,0,1,0,0,0,22,609,11,90,4,4847
+278,mini-logging-utils,Framework,C#,Logging,ISC,Spring,NuGet,Maintained,2018-10-16,0.942,0.785,1,1,0,1,0,42,185,97,45,24,1865
+279,micro-tool-1279-spring-boot-starter,Tool,Python,Messaging,Unlicense,Open Source Community,PyPI,Maintained,2021-07-16,0.504,0.323,1,0,0,0,1,28,540,91,497,33,1989
+280,easy-middleware-1280,Middleware,Kotlin,Machine Learning,MPL-2.0,University Research,Maven Central,Legacy,2016-11-16,0.655,0.451,0,0,1,0,0,27,399,80,462,11,3759
+281,simple-security,Starter,Scala,Security,MIT,Individual Contributors,Maven Central,Maintained,2017-05-16,0.565,0.596,0,1,1,0,1,15,213,9,345,33,4571
+282,micro-starter-1282-lib,Starter,Rust,Documentation,LGPL-2.1,Open Source Community,Crates.io,Experimental,2021-01-16,0.604,0.795,0,0,1,1,0,42,667,5,226,17,101
+283,micro-web-framework,Framework,C#,Web Framework,MPL-2.0,Spring,NuGet,Maintained,2017-01-16,0.921,0.498,0,0,1,0,1,44,268,80,145,42,4745
+284,easy-sdk-1284-lib,SDK,Scala,Testing,ISC,JetBrains,Maven Central,Legacy,2017-10-16,0.903,0.979,1,0,0,0,0,35,724,74,481,33,2475
+285,light-driver-1285-api,Driver,PHP,Serialization,ISC,VMware,Maven Central,Deprecated,2019-03-16,0.647,0.272,1,0,0,0,1,18,719,66,282,22,3998
+286,light-security-api,Driver,PHP,Security,AGPL-3.0,VMware,Maven Central,Maintained,2021-03-16,0.872,0.361,0,1,0,1,1,21,66,69,300,33,2228
+287,driver-1287-client,Driver,JavaScript,Documentation,BSD-3-Clause,Google,npm,Stable,2022-03-16,0.837,0.575,1,0,1,1,1,24,755,39,359,23,627
+288,light-web-framework,Middleware,Swift,Web Framework,LGPL-2.1,Spring,Maven Central,Active,2020-12-16,0.692,0.423,0,0,0,1,1,23,494,2,376,28,590
+289,simple-database-driver-spring-boot-starter,Library,Java,Database Driver,MPL-2.0,Individual Contributors,Maven Central,Experimental,2019-09-16,0.556,0.609,0,0,1,0,1,12,359,42,436,1,2408
+290,micro-middleware-1290-lib,Middleware,TypeScript,Networking,AGPL-3.0,VMware,npm,Legacy,2017-02-16,0.750,0.663,0,1,1,0,1,34,633,11,121,21,2399
+291,sdk-1291-spring-boot-starter,SDK,Kotlin,Database Driver,Apache-2.0,Open Source Community,Maven Central,Stable,2016-07-16,0.689,0.789,1,1,0,0,0,40,420,81,126,16,2558
+292,awesome-library-1292-core,Library,Swift,Caching,MPL-2.0,University Research,Maven Central,Deprecated,2019-08-16,0.648,0.434,1,1,0,1,1,1,933,13,198,28,4628
+293,mini-framework-1293-api,Framework,Python,Serialization,Apache-2.0,VMware,PyPI,Stable,2018-04-16,0.686,0.748,1,0,1,1,1,34,224,12,65,11,4867
+294,light-template-1294-spring-boot-starter,Template,TypeScript,Security,Apache-2.0,VMware,npm,Experimental,2020-05-16,0.551,0.152,0,0,1,1,1,14,200,79,377,22,1087
+295,mini-middleware-1295-client,Middleware,PHP,Utilities,BSD-3-Clause,Facebook,Maven Central,Legacy,2019-02-16,0.760,0.419,0,1,1,0,0,25,787,71,204,20,2475
+296,awesome-middleware-1296-spring-boot-starter,Middleware,C#,Testing,AGPL-3.0,Microsoft,NuGet,Maintained,2020-03-16,0.842,0.463,0,1,1,0,1,34,955,73,212,4,1555
+297,awesome-messaging-core,Middleware,Ruby,Messaging,LGPL-2.1,Spring,RubyGems,Active,2016-08-16,0.501,0.733,0,0,1,0,1,22,422,24,440,10,3851
+298,simple-code-analysis-utils,Tool,C++,Code Analysis,LGPL-2.1,Facebook,Maven Central,Experimental,2016-05-16,0.963,0.663,1,0,1,1,1,17,942,59,105,12,1800
+299,super-driver-1299-client,Driver,Scala,Testing,MPL-2.0,Open Source Community,Maven Central,Deprecated,2021-02-16,0.735,0.716,0,1,0,0,1,27,217,61,345,36,4606
+300,micro-api-1300-client,API,Rust,Caching,Apache-2.0,Apache Software Foundation,Crates.io,Active,2023-03-16,0.545,0.789,1,1,1,0,0,22,153,35,286,21,456
+301,mini-framework-1301-lib,Framework,Scala,UI Components,MIT,Amazon,Maven Central,Active,2019-05-16,0.705,0.418,0,1,1,0,0,30,91,81,210,4,1162
+302,simple-sdk-1302,SDK,Go,Messaging,MIT,JetBrains,Go Modules,Legacy,2021-06-16,0.646,0.437,0,1,1,0,0,8,571,94,235,49,2681
+303,awesome-sdk-1303-client,SDK,Python,Machine Learning,Apache-2.0,VMware,PyPI,Active,2018-01-16,0.880,0.870,1,1,0,1,1,9,800,51,296,37,1874
+304,library-1304-core,Library,C#,Web Framework,MIT,University Research,NuGet,Deprecated,2022-12-16,0.831,0.212,1,1,1,1,1,21,861,66,479,21,872
+305,awesome-utilities,API,TypeScript,Utilities,EPL-2.0,Microsoft,npm,Maintained,2019-01-16,0.696,0.338,1,1,1,1,1,41,403,42,379,10,2928
+306,light-library-1306-core,Library,Rust,Machine Learning,LGPL-2.1,University Research,Crates.io,Maintained,2022-08-16,0.758,0.830,0,0,0,1,1,41,92,23,223,33,1743
+307,light-tool-1307-utils,Tool,C++,Messaging,EPL-2.0,JetBrains,Maven Central,Maintained,2023-05-16,0.534,0.796,0,1,0,1,0,2,462,29,0,18,9
+308,micro-database-driver-api,Plugin,JavaScript,Database Driver,GPL-3.0,Amazon,npm,Stable,2021-04-16,0.716,1.000,1,0,1,0,1,24,731,83,257,41,4818
+309,simple-framework-1309-core,Framework,C#,Testing,BSD-3-Clause,Open Source Community,NuGet,Experimental,2023-05-16,0.624,0.216,1,0,1,1,1,10,9,11,30,37,2565
+310,micro-template-1310-utils,Template,Swift,Build Tool,BSD-3-Clause,Eclipse Foundation,Maven Central,Maintained,2023-11-16,0.902,0.368,1,0,0,0,0,18,227,32,40,33,454
+311,micro-utilities-client,SDK,JavaScript,Utilities,ISC,Spring,npm,Stable,2019-08-16,0.722,0.697,1,0,1,0,1,14,862,75,15,30,1019
+312,awesome-starter-1312-client,Starter,PHP,Messaging,AGPL-3.0,VMware,Maven Central,Stable,2018-06-16,0.733,0.503,0,1,0,1,0,11,796,78,225,32,4310
+313,easy-logging-spring-boot-starter,Framework,C#,Logging,GPL-3.0,Microsoft,NuGet,Active,2018-10-16,0.523,0.828,0,0,1,1,1,38,691,30,264,9,2164
+314,super-tool-1314-client,Tool,C++,Machine Learning,BSD-3-Clause,Individual Contributors,Maven Central,Active,2016-12-16,0.820,0.811,0,1,0,0,1,43,773,87,180,44,952
+315,light-networking-api,Plugin,C++,Networking,AGPL-3.0,Apache Software Foundation,Maven Central,Deprecated,2016-03-16,0.708,0.729,0,0,1,0,1,31,432,73,332,36,591
+316,starter-1316-lib,Starter,Python,Documentation,EPL-2.0,Open Source Community,PyPI,Maintained,2022-05-16,0.581,0.383,0,0,0,1,1,8,63,12,36,30,2037
+317,super-plugin-1317-api,Plugin,Python,Messaging,LGPL-2.1,Microsoft,PyPI,Legacy,2022-04-16,0.612,0.862,0,1,1,0,1,7,886,0,169,4,2797
+318,mini-build-tool-client,Starter,Python,Build Tool,MPL-2.0,Red Hat,PyPI,Experimental,2016-12-16,0.821,0.270,0,0,1,1,1,9,242,26,228,32,119
+319,super-messaging-core,Plugin,Go,Messaging,BSD-3-Clause,Apache Software Foundation,Go Modules,Legacy,2023-05-16,0.941,0.317,0,1,0,0,0,49,72,71,494,7,3799
+320,micro-plugin-1320-client,Plugin,Go,Web Framework,BSD-3-Clause,Apache Software Foundation,Go Modules,Active,2018-12-16,0.824,0.837,0,1,1,1,0,16,786,8,458,46,3450
+321,template-1321,Template,Kotlin,Messaging,LGPL-2.1,JetBrains,Maven Central,Deprecated,2023-01-16,0.915,0.680,0,1,1,1,1,16,36,61,93,21,4756
+322,mini-documentation-api,API,JavaScript,Documentation,BSD-3-Clause,Facebook,npm,Legacy,2018-10-16,0.934,0.637,0,1,0,0,0,28,163,66,227,11,3440
+323,fast-sdk-1323,SDK,PHP,Logging,AGPL-3.0,Apache Software Foundation,Maven Central,Experimental,2016-05-16,0.774,0.475,1,0,0,1,1,17,695,16,496,31,4728
+324,plugin-1324,Plugin,Kotlin,Testing,EPL-2.0,Individual Contributors,Maven Central,Active,2022-03-16,0.873,0.773,1,0,0,1,1,5,482,2,163,17,4323
+325,tool-1325-spring-boot-starter,Tool,Rust,Messaging,Apache-2.0,Red Hat,Crates.io,Legacy,2016-06-16,0.616,0.591,0,0,0,0,1,43,136,40,36,46,44
+326,super-sdk-1326-spring-boot-starter,SDK,Ruby,Caching,AGPL-3.0,Individual Contributors,RubyGems,Experimental,2017-11-16,0.608,0.514,1,0,1,1,1,37,464,42,458,49,4554
+327,mini-library-1327-api,Library,C++,Machine Learning,Unlicense,Open Source Community,Maven Central,Deprecated,2019-02-16,0.671,0.731,1,0,0,0,0,20,352,39,437,41,3498
+328,library-1328-spring-boot-starter,Library,C#,Caching,Apache-2.0,VMware,NuGet,Stable,2016-04-16,0.949,0.557,0,0,1,1,0,32,210,32,413,47,2356
+329,easy-tool-1329,Tool,TypeScript,Documentation,Apache-2.0,Spring,npm,Stable,2022-05-16,0.912,0.989,0,0,1,1,1,13,603,7,398,40,1243
+330,awesome-framework-1330-spring-boot-starter,Framework,Ruby,Security,Apache-2.0,Facebook,RubyGems,Experimental,2023-09-16,0.681,0.504,0,0,1,1,1,23,79,70,96,36,4955
+331,simple-ui-components-spring-boot-starter,API,C++,UI Components,Apache-2.0,Open Source Community,Maven Central,Maintained,2018-04-16,0.754,0.624,1,0,0,1,1,13,122,57,80,3,2288
+332,light-plugin-1332-spring-boot-starter,Plugin,Ruby,Caching,BSD-3-Clause,Eclipse Foundation,RubyGems,Experimental,2021-10-16,0.959,0.403,0,0,1,1,0,25,984,74,369,22,1887
+333,super-library-1333,Library,Go,Utilities,ISC,Microsoft,Go Modules,Legacy,2017-11-16,0.905,0.715,1,0,1,0,1,1,52,23,483,16,2540
+334,easy-documentation-spring-boot-starter,Framework,Ruby,Documentation,MIT,University Research,RubyGems,Deprecated,2021-05-16,0.701,0.596,1,1,1,1,1,30,566,97,482,26,3213
+335,light-big-data,Tool,Java,Big Data,Apache-2.0,University Research,Maven Central,Maintained,2017-10-16,0.559,0.453,0,1,0,0,1,37,998,28,185,37,3108
+336,simple-middleware-1336-lib,Middleware,Scala,Serialization,AGPL-3.0,Open Source Community,Maven Central,Stable,2018-08-16,0.942,0.535,0,0,0,1,1,39,119,28,138,37,407
+337,micro-tool-1337-core,Tool,Java,Networking,AGPL-3.0,Individual Contributors,Maven Central,Maintained,2020-03-16,0.966,0.741,0,1,1,1,1,30,309,83,440,26,2673
+338,super-middleware-1338-utils,Middleware,Ruby,Build Tool,LGPL-2.1,VMware,RubyGems,Deprecated,2022-06-16,0.711,0.613,1,1,0,1,1,36,645,80,75,45,2399
+339,mini-starter-1339,Starter,Ruby,Security,Unlicense,Microsoft,RubyGems,Legacy,2018-06-16,0.704,0.695,1,0,0,0,0,39,466,75,428,11,613
+340,awesome-driver-1340-lib,Driver,Scala,Networking,LGPL-2.1,Apache Software Foundation,Maven Central,Active,2021-02-16,0.589,0.659,0,0,0,0,0,30,67,82,402,6,2702
+341,mini-template-1341-core,Template,Rust,Build Tool,EPL-2.0,Individual Contributors,Crates.io,Experimental,2021-08-16,0.777,0.288,0,0,0,1,1,45,658,31,31,23,537
+342,simple-middleware-1342-spring-boot-starter,Middleware,Go,Security,LGPL-2.1,Apache Software Foundation,Go Modules,Stable,2022-06-16,0.931,1.000,1,1,1,1,1,36,915,49,231,17,3019
+343,simple-tool-1343-core,Tool,Rust,Big Data,Unlicense,Spring,Crates.io,Stable,2018-08-16,0.706,1.000,0,0,1,0,1,13,170,72,328,49,34
+344,awesome-template-1344-lib,Template,Python,Code Analysis,EPL-2.0,Spring,PyPI,Maintained,2022-04-16,0.882,0.309,0,0,1,1,1,14,626,24,183,26,4417
+345,awesome-api-1345-spring-boot-starter,API,Scala,Big Data,AGPL-3.0,Microsoft,Maven Central,Active,2018-11-16,0.697,0.822,1,1,0,0,0,13,39,42,447,1,3315
+346,easy-api-1346-utils,API,JavaScript,Utilities,Unlicense,Apache Software Foundation,npm,Legacy,2020-08-16,0.686,0.426,0,1,0,0,0,28,38,4,6,41,2485
+347,micro-plugin-1347-spring-boot-starter,Plugin,Kotlin,Serialization,AGPL-3.0,University Research,Maven Central,Experimental,2018-09-16,0.800,0.388,0,0,1,1,1,45,498,9,389,15,3740
+348,awesome-database-driver-client,Tool,Kotlin,Database Driver,LGPL-2.1,University Research,Maven Central,Legacy,2022-03-16,0.532,0.629,1,0,1,0,0,42,784,42,340,32,4794
+349,super-framework-1349-api,Framework,JavaScript,Testing,MIT,Amazon,npm,Active,2019-02-16,0.737,0.359,1,1,0,0,0,2,930,33,248,24,1891
+350,micro-machine-learning-api,Driver,Java,Machine Learning,EPL-2.0,JetBrains,Maven Central,Experimental,2016-04-16,0.733,0.299,1,0,0,1,1,8,531,53,114,36,105
+351,light-driver-1351-api,Driver,JavaScript,Code Analysis,Unlicense,Open Source Community,npm,Legacy,2020-01-16,0.727,0.564,0,1,0,0,0,19,309,44,404,0,3121
+352,mini-starter-1352-api,Starter,Kotlin,Database Driver,MPL-2.0,Red Hat,Maven Central,Stable,2023-01-16,0.741,1.000,1,0,1,1,1,42,985,2,396,21,1357
+353,super-tool-1353-spring-boot-starter,Tool,PHP,UI Components,MIT,University Research,Maven Central,Maintained,2017-04-16,0.556,0.934,0,1,0,0,1,19,555,10,192,30,1508
+354,awesome-documentation-utils,Middleware,JavaScript,Documentation,EPL-2.0,Spring,npm,Experimental,2016-12-16,0.844,0.539,1,0,0,0,1,25,101,28,383,34,4250
+355,simple-ui-components,Template,Java,UI Components,EPL-2.0,Red Hat,Maven Central,Experimental,2023-03-16,0.570,0.226,0,0,0,0,1,28,146,71,387,20,977
+356,fast-middleware-1356-client,Middleware,Rust,Web Framework,MIT,University Research,Crates.io,Active,2022-08-16,0.559,0.531,1,0,0,0,1,35,359,12,58,16,1248
+357,simple-framework-1357,Framework,JavaScript,Networking,GPL-3.0,Google,npm,Deprecated,2019-12-16,0.648,0.278,0,1,1,1,0,4,441,63,259,36,3952
+358,tool-1358-lib,Tool,Scala,Build Tool,MIT,Red Hat,Maven Central,Active,2017-05-16,0.638,0.547,1,0,1,1,1,29,522,20,354,44,2712
+359,easy-build-tool,Framework,Go,Build Tool,MIT,Amazon,Go Modules,Maintained,2016-12-16,0.792,0.619,0,0,0,1,0,47,31,39,168,42,3249
+360,light-plugin-1360-utils,Plugin,Swift,Web Framework,MPL-2.0,Google,Maven Central,Legacy,2024-02-16,0.635,0.951,1,1,0,0,0,39,940,39,19,24,2969
+361,easy-plugin-1361-lib,Plugin,JavaScript,Logging,MPL-2.0,Spring,npm,Active,2020-09-16,0.798,0.428,0,0,0,1,1,33,125,77,29,8,755
+362,simple-caching-core,SDK,Kotlin,Caching,ISC,Open Source Community,Maven Central,Experimental,2017-03-16,0.670,0.142,0,0,0,1,1,5,590,57,293,25,3156
+363,mini-framework-1363-spring-boot-starter,Framework,Scala,Database Driver,LGPL-2.1,University Research,Maven Central,Deprecated,2018-11-16,0.589,0.645,0,1,1,1,0,1,323,38,178,46,2015
+364,super-ui-components-spring-boot-starter,API,C#,UI Components,Unlicense,Facebook,NuGet,Active,2017-12-16,0.837,0.842,0,1,1,0,0,49,663,6,403,15,2673
+365,simple-sdk-1365,SDK,JavaScript,Testing,BSD-3-Clause,Google,npm,Deprecated,2023-08-16,0.683,0.844,0,0,1,1,1,20,544,87,57,7,1317
+366,light-template-1366,Template,Ruby,UI Components,LGPL-2.1,Amazon,RubyGems,Stable,2022-02-16,0.723,0.965,1,1,1,0,1,57,592,10,29,14,607
+367,fast-plugin-1367-lib,Plugin,PHP,Database Driver,AGPL-3.0,VMware,Maven Central,Legacy,2021-02-16,0.772,0.688,0,1,0,0,0,30,221,71,136,39,4044
+368,super-ui-components-api,Starter,Ruby,UI Components,GPL-3.0,Google,RubyGems,Active,2023-06-16,0.829,0.421,0,0,0,1,1,48,569,66,367,21,3457
+369,tool-1369-lib,Tool,PHP,Serialization,AGPL-3.0,Red Hat,Maven Central,Active,2016-10-16,0.690,0.982,0,1,1,1,1,21,131,58,292,3,1908
+370,middleware-1370-api,Middleware,JavaScript,Serialization,GPL-3.0,Eclipse Foundation,npm,Maintained,2016-03-16,0.519,0.625,0,1,1,0,0,29,421,9,280,46,4672
+371,light-library-1371,Library,Scala,Networking,BSD-3-Clause,Individual Contributors,Maven Central,Active,2016-11-16,0.847,0.700,1,1,1,0,1,44,312,87,47,9,3008
+372,awesome-plugin-1372-lib,Plugin,Java,Code Analysis,MPL-2.0,Individual Contributors,Maven Central,Experimental,2016-08-16,0.862,0.486,0,0,0,1,1,32,929,24,347,18,1650
+373,simple-networking-client,API,TypeScript,Networking,LGPL-2.1,Google,npm,Maintained,2017-12-16,0.831,0.712,0,1,0,1,0,22,477,0,415,35,1776
+374,mini-framework-1374,Framework,JavaScript,Documentation,LGPL-2.1,VMware,npm,Deprecated,2019-08-16,0.895,0.590,0,0,0,1,0,10,198,27,164,39,686
+375,easy-plugin-1375-core,Plugin,Rust,Web Framework,Apache-2.0,Individual Contributors,Crates.io,Maintained,2023-11-16,0.983,0.610,0,0,1,1,0,8,498,77,92,7,810
+376,fast-api-1376-api,API,Rust,Logging,ISC,Facebook,Crates.io,Experimental,2019-07-16,0.621,0.747,0,0,0,1,1,11,4,98,259,43,3109
+377,simple-messaging-spring-boot-starter,Framework,Java,Messaging,Unlicense,Open Source Community,Maven Central,Maintained,2023-06-16,0.848,0.734,0,1,1,0,1,7,568,86,163,24,902
+378,fast-big-data-lib,Library,Swift,Big Data,MIT,JetBrains,Maven Central,Experimental,2016-06-16,0.522,0.437,0,0,1,0,1,26,83,49,135,27,2943
+379,mini-template-1379-core,Template,PHP,Logging,ISC,Microsoft,Maven Central,Active,2023-09-16,0.752,0.906,0,1,1,1,0,2,415,60,36,40,2869
+380,easy-driver-1380-client,Driver,Swift,Utilities,Apache-2.0,Spring,Maven Central,Maintained,2023-12-16,0.696,0.826,1,1,1,0,1,6,274,17,376,47,612
+381,tool-1381-lib,Tool,Ruby,Utilities,ISC,Eclipse Foundation,RubyGems,Active,2018-03-16,0.503,0.737,1,1,0,1,1,47,782,41,31,31,703
+382,awesome-sdk-1382-spring-boot-starter,SDK,Kotlin,Database Driver,MPL-2.0,Amazon,Maven Central,Active,2017-01-16,0.616,0.663,1,1,1,0,1,5,281,72,128,31,667
+383,super-framework-1383-core,Framework,C++,Documentation,GPL-3.0,Eclipse Foundation,Maven Central,Experimental,2020-12-16,0.714,0.607,0,0,1,0,1,34,62,3,83,47,3059
+384,simple-web-framework-utils,SDK,C++,Web Framework,BSD-3-Clause,Individual Contributors,Maven Central,Maintained,2017-10-16,0.523,0.752,0,1,0,0,1,41,994,76,465,48,1372
+385,mini-library-1385,Library,Java,Machine Learning,ISC,JetBrains,Maven Central,Maintained,2016-04-16,0.755,0.526,0,1,0,1,1,50,655,8,101,41,2698
+386,light-plugin-1386-api,Plugin,Swift,Documentation,MIT,Open Source Community,Maven Central,Stable,2020-10-16,0.931,0.589,1,0,1,1,1,32,363,68,255,36,4257
+387,light-starter-1387,Starter,Python,Serialization,AGPL-3.0,Individual Contributors,PyPI,Active,2018-08-16,0.822,0.361,0,0,0,0,1,25,480,98,456,13,4796
+388,micro-messaging-spring-boot-starter,SDK,Scala,Messaging,LGPL-2.1,Spring,Maven Central,Legacy,2018-06-16,0.771,0.588,0,0,0,0,1,43,900,44,3,3,4576
+389,light-plugin-1389-client,Plugin,Ruby,Caching,Apache-2.0,Eclipse Foundation,RubyGems,Stable,2021-08-16,0.819,0.687,0,0,0,1,0,57,461,61,300,9,4505
+390,light-logging-client,Tool,Go,Logging,EPL-2.0,Google,Go Modules,Maintained,2022-02-16,0.982,0.818,0,0,1,1,0,25,681,87,429,20,3796
+391,super-middleware-1391-spring-boot-starter,Middleware,Go,Testing,Unlicense,Spring,Go Modules,Stable,2019-03-16,0.616,1.000,0,1,0,0,1,17,128,36,179,22,4624
+392,micro-plugin-1392-spring-boot-starter,Plugin,PHP,Database Driver,MPL-2.0,Open Source Community,Maven Central,Experimental,2020-12-16,0.537,0.734,0,0,1,1,1,7,508,22,457,41,2018
+393,micro-testing,Tool,Java,Testing,BSD-3-Clause,Microsoft,Maven Central,Deprecated,2021-08-16,0.856,0.431,0,0,0,1,1,41,228,35,340,24,1676
+394,micro-library-1394-utils,Library,Scala,Messaging,GPL-3.0,Eclipse Foundation,Maven Central,Maintained,2019-12-16,0.963,0.789,0,1,0,0,1,5,793,19,484,33,1491
+395,simple-driver-1395,Driver,Swift,Utilities,EPL-2.0,Apache Software Foundation,Maven Central,Maintained,2023-12-16,0.841,0.380,0,0,0,1,0,14,26,80,168,1,386
+396,mini-build-tool-lib,Plugin,Swift,Build Tool,ISC,Amazon,Maven Central,Active,2020-11-16,0.955,0.863,0,1,1,0,1,30,0,72,185,21,79
+397,awesome-starter-1397,Starter,TypeScript,Machine Learning,BSD-3-Clause,Facebook,npm,Active,2020-02-16,0.977,0.967,0,1,0,1,1,10,865,71,7,6,3621
+398,light-tool-1398-core,Tool,C++,Caching,GPL-3.0,Red Hat,Maven Central,Maintained,2023-08-16,0.590,0.552,1,0,0,1,1,48,912,59,353,17,4975
+399,super-library-1399-utils,Library,TypeScript,UI Components,EPL-2.0,Open Source Community,npm,Legacy,2023-10-16,0.617,0.589,0,1,0,0,0,27,818,2,224,21,99
+400,micro-api-1400-utils,API,JavaScript,Testing,ISC,Google,npm,Active,2020-03-16,0.935,0.947,0,1,0,0,1,8,296,21,219,23,4490
+401,simple-tool-1401-client,Tool,C#,Security,MIT,University Research,NuGet,Legacy,2023-12-16,0.988,0.989,0,1,1,0,1,41,576,6,380,17,4396
+402,super-code-analysis-core,Library,Ruby,Code Analysis,MPL-2.0,University Research,RubyGems,Deprecated,2021-07-16,0.788,0.675,0,1,1,0,1,31,611,48,386,12,2278
+403,simple-sdk-1403-spring-boot-starter,SDK,Ruby,Utilities,EPL-2.0,Individual Contributors,RubyGems,Legacy,2021-07-16,0.962,0.757,0,1,1,0,0,30,522,26,271,41,1856
+404,super-tool-1404-client,Tool,Java,Messaging,EPL-2.0,VMware,Maven Central,Active,2020-05-16,0.520,0.608,0,1,0,0,1,10,231,65,296,5,1130
+405,fast-sdk-1405-spring-boot-starter,SDK,TypeScript,Messaging,MPL-2.0,University Research,npm,Legacy,2023-12-16,0.815,0.831,1,0,0,0,0,36,670,20,168,27,4036
+406,simple-starter-1406-utils,Starter,Scala,Documentation,MIT,Eclipse Foundation,Maven Central,Maintained,2019-09-16,0.792,0.527,0,1,0,1,1,28,704,24,235,9,1476
+407,fast-middleware-1407-api,Middleware,TypeScript,UI Components,AGPL-3.0,VMware,npm,Maintained,2023-06-16,0.960,0.572,0,0,0,0,1,23,218,47,302,6,2094
+408,simple-starter-1408-core,Starter,Swift,Messaging,BSD-3-Clause,University Research,Maven Central,Active,2019-09-16,0.939,0.742,0,1,1,0,1,45,607,82,236,41,4917
+409,simple-tool-1409-core,Tool,Python,Big Data,MIT,JetBrains,PyPI,Legacy,2022-08-16,0.829,0.659,0,0,1,0,0,49,442,30,206,13,1582
+410,micro-tool-1410-client,Tool,Go,UI Components,BSD-3-Clause,JetBrains,Go Modules,Stable,2023-11-16,0.963,1.000,0,1,1,1,0,14,391,12,292,41,2527
+411,awesome-starter-1411-utils,Starter,Swift,Testing,EPL-2.0,Google,Maven Central,Stable,2020-05-16,0.811,0.634,0,0,1,1,1,38,739,54,116,32,1516
+412,simple-sdk-1412-client,SDK,TypeScript,Utilities,BSD-3-Clause,Amazon,npm,Experimental,2020-02-16,0.965,0.516,0,0,1,1,1,44,923,12,482,40,3348
+413,template-1413-lib,Template,Ruby,Security,Apache-2.0,University Research,RubyGems,Experimental,2023-09-16,0.629,0.416,0,0,1,0,0,19,170,57,270,24,4225
+414,easy-driver-1414-core,Driver,Swift,Logging,BSD-3-Clause,VMware,Maven Central,Deprecated,2021-06-16,0.937,0.513,0,1,1,1,1,42,909,21,139,13,2289
+415,micro-api-1415-spring-boot-starter,API,Scala,Messaging,MIT,Google,Maven Central,Experimental,2022-07-16,0.743,0.791,1,0,1,0,1,13,582,12,305,32,710
+416,easy-plugin-1416-api,Plugin,C#,Networking,BSD-3-Clause,VMware,NuGet,Active,2023-05-16,0.543,0.797,1,0,1,1,1,2,372,83,406,11,2213
+417,micro-sdk-1417-core,SDK,TypeScript,Serialization,LGPL-2.1,Google,npm,Active,2023-07-16,0.804,0.604,0,0,1,0,0,10,401,69,12,28,1026
+418,super-logging-lib,Framework,Rust,Logging,GPL-3.0,Microsoft,Crates.io,Active,2020-03-16,0.920,0.335,0,1,1,1,0,8,385,34,328,19,3017
+419,simple-driver-1419-api,Driver,Kotlin,Machine Learning,LGPL-2.1,Individual Contributors,Maven Central,Maintained,2017-10-16,0.571,0.898,1,0,1,1,1,14,176,19,297,26,3262
+420,light-driver-1420-api,Driver,Scala,Serialization,MPL-2.0,Eclipse Foundation,Maven Central,Maintained,2018-03-16,0.723,0.872,1,1,1,1,0,6,339,7,484,36,445
+421,fast-database-driver-lib,Plugin,Kotlin,Database Driver,EPL-2.0,JetBrains,Maven Central,Active,2022-11-16,0.516,0.515,0,1,0,0,0,33,382,46,13,20,986
+422,easy-template-1422-spring-boot-starter,Template,Java,Big Data,BSD-3-Clause,Microsoft,Maven Central,Legacy,2017-09-16,0.801,0.816,1,0,0,0,0,11,668,32,391,41,409
+423,micro-sdk-1423,SDK,Ruby,Messaging,AGPL-3.0,Apache Software Foundation,RubyGems,Active,2022-03-16,0.835,0.479,1,1,0,0,1,1,79,7,141,26,2574
+424,tool-1424-client,Tool,Python,Web Framework,ISC,Apache Software Foundation,PyPI,Maintained,2016-03-16,0.929,0.737,0,1,0,1,1,24,553,67,36,27,3550
+425,serialization-utils,Template,Ruby,Serialization,AGPL-3.0,Open Source Community,RubyGems,Maintained,2016-11-16,0.857,0.760,1,0,0,1,0,24,613,47,136,1,2795
+426,light-tool-1426-utils,Tool,Scala,Serialization,BSD-3-Clause,Open Source Community,Maven Central,Active,2023-03-16,0.874,0.573,1,0,0,0,1,48,982,8,314,5,4527
+427,testing-utils,Tool,JavaScript,Testing,ISC,Spring,npm,Experimental,2021-08-16,0.710,0.624,1,0,0,1,0,39,392,70,6,35,3199
+428,simple-sdk-1428-api,SDK,Kotlin,Documentation,AGPL-3.0,Open Source Community,Maven Central,Legacy,2021-05-16,0.973,0.832,1,1,0,0,0,33,481,40,409,17,1440
+429,super-library-1429-api,Library,Rust,Code Analysis,GPL-3.0,University Research,Crates.io,Deprecated,2019-06-16,0.567,0.657,0,1,0,1,0,1,125,47,253,37,2029
+430,fast-starter-1430-spring-boot-starter,Starter,Kotlin,Serialization,MPL-2.0,Individual Contributors,Maven Central,Deprecated,2018-12-16,0.841,0.603,0,0,0,1,1,4,386,0,242,25,352
+431,fast-database-driver-client,Template,TypeScript,Database Driver,MIT,Apache Software Foundation,npm,Legacy,2020-10-16,0.538,0.661,0,1,1,0,1,5,854,37,367,2,1527
+432,easy-sdk-1432-lib,SDK,C#,Testing,AGPL-3.0,Red Hat,NuGet,Legacy,2021-01-16,0.870,0.618,0,1,0,0,1,3,484,74,327,47,4241
+433,awesome-template-1433-spring-boot-starter,Template,Kotlin,Logging,MIT,Microsoft,Maven Central,Stable,2016-05-16,0.600,0.890,0,1,1,1,1,31,395,82,168,6,4624
+434,light-tool-1434-core,Tool,Ruby,Messaging,GPL-3.0,Microsoft,RubyGems,Active,2022-11-16,0.807,0.381,0,1,1,0,0,45,456,87,26,5,1129
+435,simple-networking-utils,Starter,Swift,Networking,LGPL-2.1,Apache Software Foundation,Maven Central,Maintained,2023-06-16,0.600,0.996,1,0,0,1,1,38,345,28,22,36,1685
+436,light-driver-1436,Driver,Swift,UI Components,BSD-3-Clause,Red Hat,Maven Central,Maintained,2020-07-16,0.864,0.345,0,1,0,1,1,32,3,2,261,28,224
+437,mini-serialization-utils,API,Scala,Serialization,EPL-2.0,Red Hat,Maven Central,Stable,2024-02-16,0.801,0.725,0,1,1,0,0,45,105,92,367,2,2630
+438,awesome-framework-1438-utils,Framework,Rust,Database Driver,LGPL-2.1,Spring,Crates.io,Deprecated,2017-03-16,0.821,0.758,0,0,0,0,1,6,599,79,419,23,4051
+439,easy-driver-1439-spring-boot-starter,Driver,Scala,Testing,MIT,Eclipse Foundation,Maven Central,Deprecated,2019-09-16,0.884,0.221,1,0,0,1,1,7,530,37,286,40,3219
+440,api-1440-api,API,TypeScript,Messaging,Unlicense,University Research,npm,Legacy,2023-04-16,0.554,0.723,0,1,0,0,0,40,933,80,452,18,1289
+441,awesome-tool-1441-client,Tool,Rust,UI Components,Unlicense,Google,Crates.io,Maintained,2019-01-16,0.999,0.482,0,1,0,1,1,38,388,31,445,48,395
+442,ui-components-core,Template,Java,UI Components,BSD-3-Clause,Open Source Community,Maven Central,Legacy,2021-12-16,0.705,0.344,0,1,0,0,1,16,220,99,224,47,3603
+443,super-framework-1443-client,Framework,Kotlin,Build Tool,AGPL-3.0,Eclipse Foundation,Maven Central,Maintained,2021-12-16,0.573,0.691,1,1,0,0,1,36,353,40,54,48,1771
+444,fast-plugin-1444-spring-boot-starter,Plugin,Kotlin,Networking,AGPL-3.0,University Research,Maven Central,Experimental,2022-03-16,0.757,0.556,0,0,1,0,1,44,726,42,41,23,3703
+445,mini-framework-1445,Framework,Ruby,Database Driver,EPL-2.0,Spring,RubyGems,Deprecated,2021-06-16,0.709,0.545,0,1,1,0,1,5,553,6,374,40,3819
+446,simple-big-data-spring-boot-starter,Starter,Go,Big Data,Unlicense,Apache Software Foundation,Go Modules,Deprecated,2017-12-16,0.897,0.330,1,1,0,0,1,1,630,68,290,9,3813
+447,mini-starter-1447-core,Starter,JavaScript,Networking,Apache-2.0,University Research,npm,Legacy,2019-02-16,0.632,0.481,0,1,0,0,0,30,667,83,493,46,1976
+448,easy-framework-1448-lib,Framework,Java,Database Driver,GPL-3.0,Spring,Maven Central,Active,2022-08-16,0.695,0.451,1,0,1,1,1,42,846,16,316,40,3320
+449,mini-api-1449-core,API,Go,Security,MPL-2.0,Spring,Go Modules,Legacy,2020-03-16,0.798,0.816,1,1,0,0,0,10,279,49,249,18,4161
+450,fast-middleware-1450-core,Middleware,Python,Big Data,Apache-2.0,Amazon,PyPI,Deprecated,2018-01-16,0.695,0.251,0,0,0,1,1,29,559,10,295,8,264
+451,fast-library-1451,Library,C#,Web Framework,EPL-2.0,VMware,NuGet,Deprecated,2019-11-16,0.709,0.371,0,1,1,1,1,1,281,21,442,39,2024
+452,super-serialization,Driver,TypeScript,Serialization,ISC,VMware,npm,Experimental,2018-11-16,0.536,0.338,1,0,0,0,1,25,267,56,91,5,2221
+453,easy-starter-1453,Starter,C++,Utilities,EPL-2.0,Amazon,Maven Central,Active,2018-11-16,0.782,0.512,0,0,1,1,1,2,871,52,477,17,3083
+454,micro-testing-lib,Template,C#,Testing,BSD-3-Clause,Eclipse Foundation,NuGet,Active,2016-05-16,0.993,0.897,0,0,0,0,1,29,762,52,456,22,4815
+455,micro-caching-core,Library,Kotlin,Caching,BSD-3-Clause,Open Source Community,Maven Central,Maintained,2019-07-16,0.915,0.326,0,0,1,0,0,11,816,90,156,34,4709
+456,database-driver,Library,PHP,Database Driver,Apache-2.0,Amazon,Maven Central,Legacy,2018-08-16,0.743,0.931,0,1,0,0,0,13,662,28,193,41,1240
+457,simple-starter-1457,Starter,Scala,UI Components,AGPL-3.0,Apache Software Foundation,Maven Central,Deprecated,2023-04-16,0.611,0.761,1,0,0,0,0,5,750,31,255,49,3340
+458,easy-api-1458,API,Go,Machine Learning,AGPL-3.0,Google,Go Modules,Experimental,2017-11-16,0.558,0.687,0,0,0,1,0,3,188,43,491,32,3838
+459,simple-driver-1459,Driver,Swift,Logging,EPL-2.0,JetBrains,Maven Central,Legacy,2018-01-16,0.741,0.945,1,0,0,0,1,49,878,92,80,0,4297
+460,mini-testing-utils,SDK,Java,Testing,AGPL-3.0,Eclipse Foundation,Maven Central,Stable,2021-04-16,0.980,0.975,0,1,0,0,0,20,145,17,469,31,4067
+461,super-template-1461-utils,Template,Java,Documentation,ISC,University Research,Maven Central,Deprecated,2017-04-16,0.844,0.435,1,1,1,0,1,19,168,66,35,48,3999
+462,super-plugin-1462-lib,Plugin,TypeScript,Web Framework,Apache-2.0,Apache Software Foundation,npm,Active,2023-09-16,0.807,0.347,1,1,1,1,1,19,13,32,66,11,650
+463,starter-1463-lib,Starter,Rust,Messaging,BSD-3-Clause,University Research,Crates.io,Legacy,2023-11-16,0.800,0.893,0,0,1,0,0,9,826,49,75,31,1032
+464,fast-messaging-utils,Template,Go,Messaging,Unlicense,Individual Contributors,Go Modules,Stable,2021-06-16,0.786,0.800,0,1,1,0,0,51,852,16,285,28,4295
+465,fast-sdk-1465-spring-boot-starter,SDK,Ruby,Serialization,EPL-2.0,JetBrains,RubyGems,Deprecated,2019-01-16,0.929,0.382,0,1,1,1,1,3,504,61,489,17,1449
+466,awesome-api-1466-spring-boot-starter,API,JavaScript,Serialization,MIT,University Research,npm,Maintained,2020-01-16,0.825,0.943,0,0,1,1,1,31,161,99,125,11,1210
+467,awesome-template-1467-lib,Template,Python,Messaging,Apache-2.0,Microsoft,PyPI,Active,2019-07-16,0.552,0.721,0,1,0,1,0,17,211,72,152,18,2551
+468,driver-1468-api,Driver,Java,Logging,BSD-3-Clause,University Research,Maven Central,Active,2018-05-16,0.784,0.390,0,1,1,1,0,35,42,23,167,39,3084
+469,awesome-template-1469-core,Template,Ruby,Networking,LGPL-2.1,Facebook,RubyGems,Active,2018-03-16,0.711,0.304,0,1,0,1,1,49,810,28,353,45,4029
+470,database-driver,Template,Ruby,Database Driver,MIT,Spring,RubyGems,Maintained,2018-07-16,0.539,0.998,0,1,1,0,1,39,808,47,107,24,1013
+471,fast-tool-1471-spring-boot-starter,Tool,Ruby,Machine Learning,AGPL-3.0,Microsoft,RubyGems,Deprecated,2017-04-16,0.787,0.727,0,0,0,1,1,16,310,28,479,10,2401
+472,super-framework-1472-api,Framework,TypeScript,Database Driver,EPL-2.0,JetBrains,npm,Legacy,2020-05-16,0.664,0.973,0,0,0,0,1,49,82,91,372,22,3452
+473,light-library-1473,Library,JavaScript,Networking,Unlicense,Red Hat,npm,Deprecated,2021-01-16,0.772,0.502,1,0,1,0,1,6,839,27,12,32,4241
+474,awesome-messaging-lib,Framework,Swift,Messaging,AGPL-3.0,Facebook,Maven Central,Active,2020-06-16,0.687,0.888,1,0,0,1,1,26,335,31,230,30,4115
+475,easy-plugin-1475-lib,Plugin,Scala,Networking,EPL-2.0,Eclipse Foundation,Maven Central,Legacy,2023-11-16,0.521,0.730,0,1,1,0,1,7,377,40,117,49,1557
+476,light-framework-1476-lib,Framework,Go,Caching,ISC,Amazon,Go Modules,Active,2022-06-16,0.602,0.443,0,1,1,0,1,36,119,59,203,24,1807
+477,mini-tool-1477-api,Tool,C++,Big Data,Apache-2.0,JetBrains,Maven Central,Legacy,2018-05-16,0.512,0.417,1,0,1,0,0,38,885,6,333,29,3449
+478,awesome-api-1478-client,API,Kotlin,Machine Learning,ISC,JetBrains,Maven Central,Legacy,2016-06-16,0.733,0.855,1,0,1,0,1,22,3,19,321,36,3491
+479,middleware-1479-api,Middleware,Java,UI Components,MIT,Amazon,Maven Central,Active,2019-04-16,0.532,0.368,0,1,0,0,0,38,200,86,259,37,2283
+480,micro-middleware-1480-lib,Middleware,TypeScript,Messaging,GPL-3.0,Google,npm,Legacy,2020-11-16,0.999,0.434,0,1,1,0,0,22,948,18,302,13,3688
+481,light-middleware-1481-api,Middleware,Ruby,Documentation,Unlicense,Facebook,RubyGems,Experimental,2017-06-16,0.780,0.760,1,0,0,1,1,19,902,64,4,49,3469
+482,fast-plugin-1482-core,Plugin,Go,UI Components,Unlicense,VMware,Go Modules,Experimental,2016-09-16,0.898,0.224,1,0,0,0,1,45,523,98,24,27,4680
+483,super-library-1483,Library,JavaScript,Database Driver,GPL-3.0,Open Source Community,npm,Experimental,2019-11-16,0.921,0.768,1,0,1,1,0,6,214,10,498,14,4610
+484,micro-web-framework,API,Java,Web Framework,BSD-3-Clause,University Research,Maven Central,Maintained,2018-06-16,0.600,0.376,0,1,1,0,0,45,171,98,131,15,3250
+485,awesome-tool-1485,Tool,C#,Machine Learning,MPL-2.0,Amazon,NuGet,Maintained,2017-08-16,0.882,0.965,1,0,0,0,1,24,694,92,206,20,1954
+486,template-1486-api,Template,Go,Caching,ISC,Eclipse Foundation,Go Modules,Legacy,2018-07-16,0.551,0.737,1,1,1,0,1,16,732,26,455,6,2527
+487,mini-plugin-1487-api,Plugin,Kotlin,Build Tool,MPL-2.0,Eclipse Foundation,Maven Central,Legacy,2020-09-16,0.813,0.556,0,1,1,0,0,11,495,96,460,37,4120
+488,light-logging-spring-boot-starter,Middleware,Kotlin,Logging,BSD-3-Clause,Amazon,Maven Central,Deprecated,2016-11-16,0.566,0.394,0,1,0,0,0,10,750,35,409,45,245
+489,api-1489-spring-boot-starter,API,Rust,Code Analysis,LGPL-2.1,VMware,Crates.io,Maintained,2019-03-16,0.999,0.507,0,1,1,1,0,49,649,3,319,33,4496
+490,fast-networking-client,Tool,C++,Networking,MPL-2.0,VMware,Maven Central,Stable,2021-12-16,0.604,0.875,0,1,0,1,1,36,160,6,338,33,323
+491,micro-library-1491-utils,Library,JavaScript,Caching,GPL-3.0,University Research,npm,Legacy,2017-03-16,0.748,0.677,0,1,0,0,1,13,64,64,130,9,889
+492,fast-api-1492-spring-boot-starter,API,Rust,Logging,Unlicense,Open Source Community,Crates.io,Legacy,2021-06-16,0.694,0.520,0,1,1,0,0,26,158,3,490,30,2619
+493,easy-template-1493-spring-boot-starter,Template,Go,Documentation,GPL-3.0,Amazon,Go Modules,Legacy,2023-07-16,0.988,0.889,0,1,0,0,1,37,118,14,22,16,328
+494,light-template-1494-api,Template,JavaScript,Utilities,EPL-2.0,University Research,npm,Deprecated,2016-12-16,0.988,0.486,0,1,1,0,0,26,889,88,231,35,743
+495,mini-driver-1495-api,Driver,C#,Security,MPL-2.0,Amazon,NuGet,Experimental,2019-07-16,0.736,0.320,0,0,0,1,1,38,207,25,76,44,1143
+496,micro-logging-lib,API,Java,Logging,Apache-2.0,Amazon,Maven Central,Stable,2022-08-16,0.616,0.596,0,0,1,0,1,60,124,37,91,4,4004
+497,awesome-driver-1497-api,Driver,Python,Networking,AGPL-3.0,University Research,PyPI,Experimental,2022-07-16,0.534,0.778,0,0,1,1,1,50,677,5,239,18,3236
+498,mini-tool-1498,Tool,Rust,Web Framework,ISC,University Research,Crates.io,Active,2021-09-16,0.611,0.331,1,1,0,0,0,48,301,76,141,30,3569
+499,simple-ui-components-spring-boot-starter,Middleware,Java,UI Components,Apache-2.0,VMware,Maven Central,Experimental,2017-10-16,0.593,0.333,1,0,1,0,1,35,304,19,300,8,1337
+500,mini-security-spring-boot-starter,Tool,Python,Security,Unlicense,VMware,PyPI,Maintained,2023-01-16,0.642,0.694,1,0,0,0,1,35,659,32,450,29,3086

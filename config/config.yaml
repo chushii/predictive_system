@@ -1,0 +1,26 @@
+models:
+    horizons:
+        3:
+            path: "models/catboost_3m.cbm"
+            target: "future_downloads_3m"
+        6:
+            path: "models/catboost_6m.cbm"
+            target: "future_downloads_6m"
+        12:
+            path: "models/catboost_12m.cbm"
+            target: "future_downloads_12m"
+    catboost:
+        iterations: 1000
+        learning_rate: 0.05
+        depth: 10
+        loss_function: "RMSE"
+        eval_metric: "MAPE"
+        l2_leaf_reg: 8
+        subsample: 0.8
+        colsample_bylevel: 0.8
+        min_data_in_leaf: 8
+        max_ctr_complexity: 4
+        random_strength: 0.1
+
+data:
+    path: "data/components.csv"
