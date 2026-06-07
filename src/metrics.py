@@ -1,8 +1,7 @@
 import logging
 import json
-import os
+
 from pathlib import Path
-from collections import defaultdict
 
 class MetricsCollector:
     def __init__(self, log_path: str = "logs/metrics.json"):

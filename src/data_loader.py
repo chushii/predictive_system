@@ -4,7 +4,7 @@ import numpy as np
 
 from typing import Dict, Any
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("config_loader")
 
 def prepare_input_data(input_dict: Dict[str, Any]) -> pd.DataFrame:
     logger.info("Подготовка входных данных для модели...")

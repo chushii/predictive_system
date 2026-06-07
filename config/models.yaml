@@ -1,0 +1,53 @@
+model_3m:
+    name: "catboost_3m.cbm"
+    target: "future_downloads_3m"
+    args:
+        iterations: 1000
+        learning_rate: 0.05
+        depth: 10
+        loss_function: "RMSE"
+        eval_metric: "MAPE"
+        l2_leaf_reg: 8
+        subsample: 0.8
+        colsample_bylevel: 0.8
+        min_data_in_leaf: 8
+        max_ctr_complexity: 4
+        random_strength: 0.1
+    training:
+        early_stopping_rounds: 50
+
+model_6m:
+    name: "catboost_6m.cbm"
+    target: "future_downloads_6m"
+    args:
+        iterations: 1000
+        learning_rate: 0.05
+        depth: 10
+        loss_function: "RMSE"
+        eval_metric: "MAPE"
+        l2_leaf_reg: 8
+        subsample: 0.8
+        colsample_bylevel: 0.8
+        min_data_in_leaf: 8
+        max_ctr_complexity: 4
+        random_strength: 0.1
+    training:
+        early_stopping_rounds: 50
+
+model_12m:
+    name: "catboost_12m.cbm"
+    target: "future_downloads_12m"
+    args:
+        iterations: 1000
+        learning_rate: 0.05
+        depth: 10
+        loss_function: "RMSE"
+        eval_metric: "MAPE"
+        l2_leaf_reg: 8
+        subsample: 0.8
+        colsample_bylevel: 0.8
+        min_data_in_leaf: 8
+        max_ctr_complexity: 4
+        random_strength: 0.1
+    training:
+        early_stopping_rounds: 50

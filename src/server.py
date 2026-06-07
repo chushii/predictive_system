@@ -1,29 +1,35 @@
 import logging
 import os
+
 from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-
-from data_loader import prepare_input_data
-from forecaster import get_forecaster
+from .data_loader import prepare_input_data
+from .forecaster import get_forecaster
+from .config_loader import get_main_config
 
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    format="%(name)s: %(message)s",
     handlers=[
-        logging.FileHandler("logs/system.log", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("server")
 
-app = FastAPI(title="Predictive System API")
+config = get_main_config()
+
+app = FastAPI(
+    title="PredSys",
+    version="1.0",
+    description="API для прогнозирования тенденций использования программных компонент"
+)
 logger.info("API успешно инициализирован")
 
 class PredictionRequest(BaseModel):
-    horizon: Literal["3m", "6m", "12m"] = Field(..., description="Горизонт прогнозирования")
+    horizon: Literal["3 месяца", "6 месяцев", "12 месяцев"] = Field(..., description="Горизонт прогнозирования")
 
     type: str = Field(..., description="Тип компонента")
     language: str = Field(..., description="Язык программирования")

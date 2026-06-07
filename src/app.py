@@ -6,24 +6,22 @@ import io
 import os
 
 os.makedirs("logs", exist_ok=True)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(name)s: %(message)s",
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
 logger = logging.getLogger("app")
 
-logger.handlers.clear()
-logger.setLevel(logging.INFO)
-
-formatter = logging.Formatter(
-    "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
-)
-
-file_handler = logging.FileHandler("logs/system.log", encoding="utf-8")
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
-
 if 'app_started' not in st.session_state:
-    logging.info("Streamlit-приложение запущено")
+    logger.info("Streamlit-приложение запущено")
     st.session_state.app_started = True
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_HOST = os.getenv("PRED_API_HOST", "127.0.0.1")
+API_PORT = os.getenv("PRED_API_PORT", "8000")
+API_URL = f"http://{API_HOST}:{API_PORT}/predict"
 
 st.set_page_config(page_title="PredSys", layout="centered")
 st.title("Прогнозирование тенденций использования программных компонент")
@@ -42,7 +40,7 @@ DEFAULTS = {
     "ecosystem_health": 1.000, "seasonality": 1.000,
     "has_ci": True, "has_examples": True, "has_tests": True,
     "has_tutorials": False, "has_website": False,
-    "horizon": "3m",
+    "horizon": "3 месяца",
 }
 
 for k, v in DEFAULTS.items():
@@ -56,7 +54,7 @@ CATEGORY_OPTIONS = ["UI Components", "Database Driver", "Testing", "Machine Lear
 ECOSYSTEM_OPTIONS = ["PyPI", "npm", "Maven Central", "NuGet", "RubyGems", "Crates.io", "Go Modules"]
 STATUS_OPTIONS = ["Active", "Maintained", "Stable", "Deprecated", "Legacy", "Experimental"]
 AUTHOR_OPTIONS = ["Open Source Community", "Facebook", "Google", "Amazon", "Microsoft", "Apache Software Foundation", "Eclipse Foundation", "Red Hat", "JetBrains", "VMware", "Spring", "University Research", "Individual Contributors", "GitHub", "Netflix", "Twitter"]
-HORIZON_OPTIONS = ["3m", "6m", "12m"]
+HORIZON_OPTIONS = ["3 месяца", "6 месяцев", "12 месяцев"]
 
 CSV_COLUMNS = [
     "type", "language", "category", "license", "author", "ecosystem", "status",
