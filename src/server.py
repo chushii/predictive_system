@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 from .data_loader import prepare_input_data
 from .forecaster import get_forecaster, build_model
 from .config_loader import get_main_config
+from .metrics import get_model_status, get_model_metrics, get_system_metrics, get_recent_logs
 
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
@@ -111,6 +112,21 @@ async def retrain_endpoint(request: RetrainRequest, background_tasks: Background
     except Exception as e:
         logger.error(f"Ошибка при инициализации переобучения: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail="Не удалось запустить процесс переобучения")
+
+
+@app.get("/api/metrics")
+async def get_metrics():
+    models_info = {}
+    for horizon_display in ["3 месяца", "6 месяцев", "12 месяцев"]:
+        models_info[horizon_display] = {
+            "status": get_model_status(horizon_display),
+            "metrics": get_model_metrics(horizon_display)
+        }
+    return {
+        "models": models_info,
+        "system": get_system_metrics(),
+        "logs": get_recent_logs(50)
+    }
 
 @app.get("/health")
 async def health_check():

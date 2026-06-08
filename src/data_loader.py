@@ -34,7 +34,7 @@ def prepare_datasets(cfg: Dict[str, Any]) -> None:
             logger.info("Используются датасеты из папки cleared/")
             return
 
-    random_seed = cfg.get("random_seed")
+    random_seed = data_cfg.get("random_seed")
     if random_seed is None:
         random_seed = random.randint(0, 999999)
         logger.info(f"Сгенерирован случайный random_seed: {random_seed}")
@@ -111,7 +111,18 @@ def prepare_datasets(cfg: Dict[str, Any]) -> None:
     x_test.to_csv(os.path.join(cleared_dir, "x_test.csv"), index=False)
     y_test.to_csv(os.path.join(cleared_dir, "y_test.csv"), index=False)
 
-    test_set = pd.concat([x_test.reset_index(drop=True), y_test.reset_index(drop=True)], axis=1)
-    test_set.to_csv(os.path.join(data_dir, "test_set.csv"), index=False)
+    x_test = x_test.drop(columns=["closure_rate"])
+    x_test['downloads'] = df['downloads']
+    x_test['future_downloads_3m'] = df['future_downloads_3m']
+    x_test['future_downloads_6m'] = df['future_downloads_6m']
+    x_test['future_downloads_12m'] = df['future_downloads_12m']
+
+    open_issues = df.loc[x_test.index, 'open_issues']
+    closed_issues = df.loc[x_test.index, 'closed_issues']
+    x_test.insert(loc=15, column='open_issues', value=open_issues)
+    x_test.insert(loc=16, column='closed_issues', value=closed_issues)
+
+    x_test = x_test.reset_index(drop=True)
+    x_test.to_csv(os.path.join(data_dir, "test_set.csv"), index=False)
 
     logger.info("Датасеты успешно сохранены")

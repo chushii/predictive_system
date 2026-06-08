@@ -15,7 +15,6 @@ model_3m:
         random_strength: 0.1
     training:
         early_stopping_rounds: 50
-        verbose: 100
 
 model_6m:
     name: "catboost_6m.cbm"
@@ -34,7 +33,6 @@ model_6m:
         random_strength: 0.1
     training:
         early_stopping_rounds: 50
-        verbose: 100
 
 model_12m:
     name: "catboost_12m.cbm"
@@ -53,4 +51,3 @@ model_12m:
         random_strength: 0.1
     training:
         early_stopping_rounds: 50
-        verbose: 100

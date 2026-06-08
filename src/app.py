@@ -59,8 +59,7 @@ HORIZON_OPTIONS = ["3 месяца", "6 месяцев", "12 месяцев"]
 CSV_COLUMNS = [
     "type", "language", "category", "license", "author", "ecosystem", "status",
     "downloads", "stars", "contributors", "dependencies", "dependents",
-    "commits", "releases", "versions",
-    "open_issues", "closed_issues",
+    "commits", "releases", "versions", "open_issues", "closed_issues",
     "market_share", "quality_score", "documentation_score", "community_score", "maturity_score",
     "language_trend", "category_trend", "ecosystem_health", "seasonality",
     "has_ci", "has_examples", "has_tests", "has_tutorials", "has_website",

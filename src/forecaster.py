@@ -89,6 +89,15 @@ def build_model(horizon: str) -> None:
     info_dir = os.path.join(logs_dir, f"{model_stem}_info")
     os.makedirs(info_dir, exist_ok=True)
 
+    logger.info(f"Обучение модели {model_name}...")
+    model = CatBoostRegressor(
+        **model_args, cat_features=cat_feats, train_dir=str(info_dir)
+    )
+
+    model.fit(
+        x_train, y_train, eval_set=(x_val, y_val), verbose=50, **training_args
+    )
+
     new_model_path = os.path.join(models_dir, model_name)
     old_model_path = os.path.join(models_dir, f"{model_stem}_old.cbm")
     if os.path.exists(old_model_path):
@@ -98,14 +107,5 @@ def build_model(horizon: str) -> None:
         logger.info(f"Создание новой резервной копии: {new_model_path} -> {old_model_path}")
         os.rename(new_model_path, old_model_path)
 
-    logger.info(f"Обучение модели {model_name}...")
-    model = CatBoostRegressor(
-        **model_args, cat_features=cat_feats,
-        logging_level='Verbose', train_dir=str(info_dir)
-    )
-
-    model.fit(
-        x_train, y_train, eval_set=(x_val, y_val), **training_args
-    )
     model.save_model(str(new_model_path))
     logger.info(f"Модель сохранена в {new_model_path}")
