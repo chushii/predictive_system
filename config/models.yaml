@@ -38,7 +38,7 @@ model_12m:
     name: "catboost_12m.cbm"
     target: "future_downloads_12m"
     args:
-        iterations: 1000
+        iterations: 100
         learning_rate: 0.05
         depth: 10
         loss_function: "RMSE"

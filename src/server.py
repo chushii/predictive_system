@@ -147,6 +147,9 @@ async def rollback_model(horizon: str):
     main_path = f"models/catboost_{suffix}.cbm"
     backup_path = f"models/catboost_{suffix}_old.cbm"
     temp_path = f"models/catboost_{suffix}_temp.cbm"
+    main_info_dir = f"logs/catboost_{suffix}_info"
+    backup_info_dir = f"logs/catboost_{suffix}_old_info"
+    temp_info_dir = f"logs/catboost_{suffix}_temp_info"
 
     if not os.path.exists(backup_path):
         raise HTTPException(status_code=404, detail="Резервная копия не найдена")
@@ -155,7 +158,13 @@ async def rollback_model(horizon: str):
         os.rename(main_path, temp_path)
         os.rename(backup_path, main_path)
         os.rename(temp_path, backup_path)
-        logger.info(f"Выполнен успешный откат модели {main_path}")
+
+        if os.path.exists(main_info_dir) and os.path.exists(backup_info_dir):
+            os.rename(main_info_dir, temp_info_dir)
+            os.rename(backup_info_dir, main_info_dir)
+            os.rename(temp_info_dir, backup_info_dir)
+
+        logger.info(f"Выполнен успешный откат метрик и модели {main_path}")
         return {"status": "success", "message": "Откат выполнен успешно"}
     except Exception as e:
         logger.error(f"Ошибка при откате модели {main_path}: {str(e)}")
