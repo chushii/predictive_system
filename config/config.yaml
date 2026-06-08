@@ -13,10 +13,10 @@ paths:
     data_dir: "data"
     models_dir: "models"
     logs_dir: "logs"
-    trends_file: "component_trends.csv"
-    metadata_file: "components_metadata.csv"
+    trends_file: "data/component_trends.csv"
+    metadata_file: "data/components_metadata.csv"
 
 data:
     test_size: 0.2
     val_size: 0.3
-    shuffle: true
+    random_seed: null

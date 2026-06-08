@@ -8,6 +8,7 @@ import subprocess
 import threading
 
 from pathlib import Path
+from src.data_loader import prepare_datasets
 
 os.makedirs("logs/", exist_ok=True)
 logging.basicConfig(
@@ -56,6 +57,12 @@ def main():
     creation_flags = 0
     if sys.platform == "win32":
         creation_flags = subprocess.CREATE_NO_WINDOW
+
+    try:
+        prepare_datasets(config)
+    except Exception as e:
+        logger.error(f"Критическая ошибка при подготовке датасетов: {str(e)}", exc_info=True)
+        raise RuntimeError("Не удалось подготовить датасеты")
 
     processes = []
     try:
@@ -112,10 +119,8 @@ def main():
 
         logger.info("Ожидание инициализации сервисов...")
         time.sleep(5)
-
-        webbrowser.open(f"http://{ui_host}:{ui_port}")
-
         logger.info("Система запущена. Нажмите Ctrl+C для остановки")
+        webbrowser.open(f"http://{ui_host}:{ui_port}")
 
         while True:
             time.sleep(1)

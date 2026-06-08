@@ -4,3 +4,5 @@
 catboost_info/
 __pycache__/
 logs/
+cleared/
+test_set.csv
