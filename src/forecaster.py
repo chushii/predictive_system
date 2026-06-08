@@ -1,6 +1,7 @@
 import logging
 import numpy as np
 import pandas as pd
+import os
 
 from pathlib import Path
 from catboost import CatBoostRegressor
@@ -47,3 +48,64 @@ class Forecaster:
 
 def get_forecaster(horizon: str) -> Forecaster:
     return Forecaster(horizon)
+
+def build_model(horizon: str) -> None:
+    horizon_key = HORIZON_MAP.get(horizon)
+    if not horizon_key:
+        logger.error(f"Получено некорректное значение горизонта прогнозирования")
+        raise ValueError(f"Неправильное значение горизонта")
+    model_cfg = get_model_config()
+    main_cfg = get_main_config()
+
+    model_name = model_cfg[horizon_key]["name"]
+    target_col = model_cfg[horizon_key]["target"]
+    model_args = model_cfg[horizon_key].get("args", {})
+    training_args = model_cfg[horizon_key].get("training", {})
+
+    logger.info(f"Загрузка данных для обучения...")
+    paths = main_cfg.get("paths", {})
+    data_dir = os.path.join(paths.get("data_dir", "data"), "cleared")
+    if os.path.exists(data_dir):
+        required_files = ["x_train.csv", "y_train.csv", "x_val.csv", "y_val.csv"]
+        all_exist = all(os.path.exists(os.path.join(data_dir, f)) for f in required_files)
+        if not all_exist:
+            logger.error("Файлы датасетов не найдены")
+            raise FileNotFoundError("Файлы датасетов не найдены")
+
+    os.makedirs("models/", exist_ok=True)
+    models_dir = paths.get("models_dir", "models")
+    logs_dir = paths.get("logs_dir", "logs")
+
+    x_train = pd.read_csv(os.path.join(data_dir, "x_train.csv"))
+    x_val = pd.read_csv(os.path.join(data_dir, "x_val.csv"))
+    y_train_full = pd.read_csv(os.path.join(data_dir, "y_train.csv"))
+    y_val_full = pd.read_csv(os.path.join(data_dir, "y_val.csv"))
+    y_train = y_train_full[target_col]
+    y_val = y_val_full[target_col]
+
+    cat_feats = x_train.select_dtypes(exclude=['number', 'datetime', 'bool']).columns.tolist()
+
+    model_stem = Path(model_name).stem
+    info_dir = os.path.join(logs_dir, f"{model_stem}_info")
+    os.makedirs(info_dir, exist_ok=True)
+
+    new_model_path = os.path.join(models_dir, model_name)
+    old_model_path = os.path.join(models_dir, f"{model_stem}_old.cbm")
+    if os.path.exists(old_model_path):
+        logger.info(f"Удаление старой резервной копии: {old_model_path}")
+        os.remove(old_model_path)
+    if os.path.exists(new_model_path):
+        logger.info(f"Создание новой резервной копии: {new_model_path} -> {old_model_path}")
+        os.rename(new_model_path, old_model_path)
+
+    logger.info(f"Обучение модели {model_name}...")
+    model = CatBoostRegressor(
+        **model_args, cat_features=cat_feats,
+        logging_level='Verbose', train_dir=str(info_dir)
+    )
+
+    model.fit(
+        x_train, y_train, eval_set=(x_val, y_val), **training_args
+    )
+    model.save_model(str(new_model_path))
+    logger.info(f"Модель сохранена в {new_model_path}")

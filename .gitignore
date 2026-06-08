@@ -6,3 +6,4 @@ __pycache__/
 logs/
 cleared/
 test_set.csv
+models/

@@ -2,10 +2,10 @@ import logging
 import os
 
 from typing import Literal
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, BackgroundTasks
 from pydantic import BaseModel, Field
 from .data_loader import prepare_input_data
-from .forecaster import get_forecaster
+from .forecaster import get_forecaster, build_model
 from .config_loader import get_main_config
 
 os.makedirs("logs", exist_ok=True)
@@ -71,6 +71,9 @@ class PredictionResponse(BaseModel):
     predicted_downloads: int
     status: str
 
+class RetrainRequest(BaseModel):
+    horizon: Literal["3 месяца", "6 месяцев", "12 месяцев"] = Field(..., description="Горизонт прогнозирования для реобучения модели")
+
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_endpoint(request: PredictionRequest):
     logger.info(f"Получен запрос на прогноз. Горизонт: {request.horizon}")
@@ -92,6 +95,22 @@ async def predict_endpoint(request: PredictionRequest):
     except Exception as e:
         logger.error(f"Ошибка при формировании прогноза: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/retrain", status_code=202)
+async def retrain_endpoint(request: RetrainRequest, background_tasks: BackgroundTasks):
+    logger.info(f"Получен запрос на реобучение модели. Горизонт: {request.horizon}")
+    try:
+        background_tasks.add_task(build_model, request.horizon)
+        return {
+            "status": "success",
+            "message": f"Процесс реобучения модели запущен в фоновом режиме"
+        }
+    except ValueError as ve:
+        logger.error(f"Ошибка валидации горизонта: {str(ve)}")
+        raise HTTPException(status_code=400, detail=str(ve))
+    except Exception as e:
+        logger.error(f"Ошибка при инициализации переобучения: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Не удалось запустить процесс переобучения")
 
 @app.get("/health")
 async def health_check():

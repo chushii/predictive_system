@@ -9,6 +9,7 @@ import threading
 
 from pathlib import Path
 from src.data_loader import prepare_datasets
+from src.forecaster import build_model, HORIZON_MAP
 
 os.makedirs("logs/", exist_ok=True)
 logging.basicConfig(
@@ -27,6 +28,14 @@ def load_config():
         logger.error(f"Конфигурационный файл не найден: {config_path}")
         sys.exit(1)
     with open(config_path, 'r', encoding='utf-8') as f:
+        return yaml.safe_load(f)
+
+def load_model_config():
+    model_config_path = Path(__file__).parent / "config" / "models.yaml"
+    if not model_config_path.exists():
+        logger.error(f"Файл настроек моделей не найден: {model_config_path}")
+        sys.exit(1)
+    with open(model_config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 def stream_output(process, name):
@@ -63,6 +72,27 @@ def main():
     except Exception as e:
         logger.error(f"Критическая ошибка при подготовке датасетов: {str(e)}", exc_info=True)
         raise RuntimeError("Не удалось подготовить датасеты")
+
+    logger.info("Проверка наличия обученных моделей...")
+    models_dir = config["paths"]["models_dir"]
+    os.makedirs(models_dir, exist_ok=True)
+    models_cfg = load_model_config()
+
+    for horizon_name, horizon_key in HORIZON_MAP.items():
+        model_filename = models_cfg[horizon_key]["name"]
+        model_path = os.path.join(models_dir, model_filename)
+
+        if not os.path.exists(model_path):
+            logger.warning(
+                f"Модель не найдена: {model_path}. Запуск процесса обучения...")
+            try:
+                build_model(horizon_name)
+            except Exception as e:
+                logger.error(f"Критическая ошибка при обучении модели: {str(e)}", exc_info=True)
+                raise RuntimeError(
+                    f"Система не может быть запущена: не удалось обучить модель '{model_filename}'")
+        else:
+            logger.info(f"Модель '{model_path}' загружена")
 
     processes = []
     try:
