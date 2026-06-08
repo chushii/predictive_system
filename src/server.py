@@ -4,6 +4,7 @@ import os
 from typing import Literal
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from pydantic import BaseModel, Field
+from datetime import datetime
 from .data_loader import prepare_input_data
 from .forecaster import get_forecaster, build_model
 from .config_loader import get_main_config
@@ -113,6 +114,52 @@ async def retrain_endpoint(request: RetrainRequest, background_tasks: Background
         logger.error(f"Ошибка при инициализации переобучения: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail="Не удалось запустить процесс переобучения")
 
+def get_file_date(filepath: str) -> str:
+    if os.path.exists(filepath):
+        mtime = os.path.getmtime(filepath)
+        return datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
+    return None
+
+@app.get("/api/models/status")
+async def get_models_status():
+    horizons_map = {"3 месяца": "3m", "6 месяцев": "6m", "12 месяцев": "12m"}
+    status = {}
+
+    for display_name, suffix in horizons_map.items():
+        main_path = f"models/catboost_{suffix}.cbm"
+        backup_path = f"models/catboost_{suffix}_old.cbm"
+
+        status[display_name] = {
+            "main_date": get_file_date(main_path),
+            "backup_date": get_file_date(backup_path)
+        }
+    return status
+
+@app.post("/api/models/rollback")
+async def rollback_model(horizon: str):
+    logger.info(f"Получен запрос на откат модели. Горизонт: {horizon}")
+    horizons_map = {"3 месяца": "3m", "6 месяцев": "6m", "12 месяцев": "12m"}
+    if horizon not in horizons_map:
+        logger.error(f"Неверное значение горизонта")
+        raise HTTPException(status_code=400, detail="Неверный горизонт")
+
+    suffix = horizons_map[horizon]
+    main_path = f"models/catboost_{suffix}.cbm"
+    backup_path = f"models/catboost_{suffix}_old.cbm"
+    temp_path = f"models/catboost_{suffix}_temp.cbm"
+
+    if not os.path.exists(backup_path):
+        raise HTTPException(status_code=404, detail="Резервная копия не найдена")
+
+    try:
+        os.rename(main_path, temp_path)
+        os.rename(backup_path, main_path)
+        os.rename(temp_path, backup_path)
+        logger.info(f"Выполнен успешный откат модели {main_path}")
+        return {"status": "success", "message": "Откат выполнен успешно"}
+    except Exception as e:
+        logger.error(f"Ошибка при откате модели {main_path}: {str(e)}")
+        raise HTTPException(status_code=500, detail="Не удалось выполнить откат")
 
 @app.get("/api/metrics")
 async def get_metrics():
@@ -125,7 +172,7 @@ async def get_metrics():
     return {
         "models": models_info,
         "system": get_system_metrics(),
-        "logs": get_recent_logs(50)
+        "logs": get_recent_logs(30)
     }
 
 @app.get("/health")
