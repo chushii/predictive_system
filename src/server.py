@@ -75,6 +75,7 @@ class PredictionResponse(BaseModel):
 
 class RetrainRequest(BaseModel):
     horizon: Literal["3 месяца", "6 месяцев", "12 месяцев"] = Field(..., description="Горизонт прогнозирования для реобучения модели")
+    auto_tune: bool = Field(default=False, description="Автоматическая подстройка гиперпараметров")
 
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_endpoint(request: PredictionRequest):
@@ -100,9 +101,9 @@ async def predict_endpoint(request: PredictionRequest):
 
 @app.post("/retrain", status_code=202)
 async def retrain_endpoint(request: RetrainRequest, background_tasks: BackgroundTasks):
-    logger.info(f"Получен запрос на реобучение модели. Горизонт: {request.horizon}")
+    logger.info(f"Получен запрос на реобучение модели. Горизонт: {request.horizon}, Авто-настройка: {request.auto_tune}")
     try:
-        background_tasks.add_task(build_model, request.horizon)
+        background_tasks.add_task(build_model, request.horizon, request.auto_tune)
         return {
             "status": "success",
             "message": f"Процесс реобучения модели запущен в фоновом режиме"

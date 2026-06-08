@@ -29,6 +29,7 @@ HORIZONS = ["3 месяца", "6 месяцев", "12 месяцев"]
 
 with tab_dashboard:
     st.header("Дэшборд")
+    st.markdown("---")
     if st.button("Обновить данные"):
         st.rerun()
 
@@ -85,47 +86,56 @@ with tab_management:
         st.error(f"Не удалось получить статус файлов моделей: {e}")
         models_status = {}
 
-    cols = st.columns(3)
-    for i, horizon in enumerate(HORIZONS):
-        with cols[i]:
-            st.subheader(f"Горизонт: {horizon}")
-            status = models_status.get(horizon, {})
+    st.markdown("---")
 
-            st.write(f"Основная модель: {status.get('main_date') or 'отсутствует'}")
-            st.write(f"Резервная копия: {status.get('backup_date') or 'отсутствует'}")
+    for horizon in HORIZONS:
+        st.subheader(f"Горизонт: {horizon}")
+        status = models_status.get(horizon, {})
 
-            st.divider()
+        col_info1, col_info2 = st.columns(2)
+        with col_info1:
+            st.write(f"**Основная модель:** {status.get('main_date') or 'отсутствует'}")
+        with col_info2:
+            st.write(f"**Резервная копия:** {status.get('backup_date') or 'отсутствует'}")
 
-            col_btn1, col_btn2 = st.columns(2)
-            with col_btn1:
-                if st.button("Реобучение", key=f"retrain_{horizon}"):
-                    with st.spinner("Отправка запроса на реобучение..."):
-                        try:
-                            res = requests.post(
-                                f"{API_URL}/retrain",
-                                json={"horizon": horizon},
-                                timeout=5
-                            )
-                            if res.status_code == 202:
-                                st.success("Реобучение запущено в фоновом режиме")
-                            else:
-                                st.error(f"Ошибка сервера: {res.text}")
-                        except Exception as e:
-                            st.error(f"Ошибка соединения: {e}")
+        st.markdown("---")
 
-            with col_btn2:
-                has_backup = status.get('backup_date') is not None
-                if st.button("Откат", key=f"rollback_{horizon}", disabled=not has_backup):
-                    with st.spinner("Выполняется откат..."):
-                        try:
-                            res = requests.post(
-                                f"{API_URL}/api/models/rollback?horizon={horizon}",
-                                timeout=5
-                            )
-                            if res.status_code == 200:
-                                st.success("Откат выполнен успешно.")
-                                st.rerun()
-                            else:
-                                st.error(f"Ошибка сервера: {res.text}")
-                        except Exception as e:
-                            st.error(f"Ошибка соединения: {e}")
+        col_btn1, col_btn2, col_btn3 = st.columns(3)
+
+        with col_btn1:
+            auto_tune = st.checkbox("Авто-настройка параметров", key=f"autotune_{horizon}",)
+
+        with col_btn2:
+            if st.button("Реобучение", key=f"retrain_{horizon}", use_container_width=True):
+                with st.spinner("Отправка запроса на реобучение..."):
+                    try:
+                        res = requests.post(
+                            f"{API_URL}/retrain",
+                            json={"horizon": horizon, "auto_tune": auto_tune},
+                            timeout=5
+                        )
+                        if res.status_code == 202:
+                            st.success("Реобучение запущено в фоновом режиме")
+                        else:
+                            st.error(f"Ошибка сервера: {res.text}")
+                    except Exception as e:
+                        st.error(f"Ошибка соединения: {e}")
+
+        with col_btn3:
+            has_backup = status.get('backup_date') is not None
+            if st.button("Откат", key=f"rollback_{horizon}", disabled=not has_backup, use_container_width=True):
+                with st.spinner("Выполняется откат..."):
+                    try:
+                        res = requests.post(
+                            f"{API_URL}/api/models/rollback?horizon={horizon}",
+                            timeout=5
+                        )
+                        if res.status_code == 200:
+                            st.success("Откат выполнен успешно.")
+                            st.rerun()
+                        else:
+                            st.error(f"Ошибка сервера: {res.text}")
+                    except Exception as e:
+                        st.error(f"Ошибка соединения: {e}")
+
+        st.markdown("<br>", unsafe_allow_html=True)

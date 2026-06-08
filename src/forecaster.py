@@ -1,8 +1,8 @@
 import logging
 import numpy as np
 import pandas as pd
-import shutil
 import os
+import optuna
 
 from pathlib import Path
 from catboost import CatBoostRegressor
@@ -50,7 +50,7 @@ class Forecaster:
 def get_forecaster(horizon: str) -> Forecaster:
     return Forecaster(horizon)
 
-def build_model(horizon: str) -> None:
+def build_model(horizon: str, auto_tune: bool = False) -> None:
     horizon_key = HORIZON_MAP.get(horizon)
     if not horizon_key:
         logger.error(f"Получено некорректное значение горизонта прогнозирования")
@@ -60,7 +60,7 @@ def build_model(horizon: str) -> None:
 
     model_name = model_cfg[horizon_key]["name"]
     target_col = model_cfg[horizon_key]["target"]
-    model_args = model_cfg[horizon_key].get("args", {})
+    model_args = model_cfg[horizon_key].get("args", {}).copy()
     training_args = model_cfg[horizon_key].get("training", {})
 
     logger.info(f"Загрузка данных для обучения...")
@@ -85,6 +85,29 @@ def build_model(horizon: str) -> None:
     y_val = y_val_full[target_col]
 
     cat_feats = x_train.select_dtypes(exclude=['number', 'datetime', 'bool']).columns.tolist()
+
+    if auto_tune:
+        logger.info("Запуск автоматического подбора параметров")
+
+        def objective(trial):
+            tune_args = model_args.copy()
+            tune_args["iterations"] = trial.suggest_int("iterations", 500, 1500, log=True)
+            tune_args["learning_rate"] = trial.suggest_float("learning_rate", 0.01, 0.1, log=True)
+            tune_args["depth"] = trial.suggest_int("depth", 4, 10, log=True)
+
+            trial_model = CatBoostRegressor(
+                **tune_args, cat_features=cat_feats, verbose=False
+            )
+            trial_model.fit(x_train, y_train, eval_set=(x_val, y_val), **training_args)
+
+            return trial_model.get_best_score()["validation"]["MAPE"]
+
+        study = optuna.create_study(direction="minimize")
+        study.optimize(objective, n_trials=10)
+
+        best_params = study.best_params
+        model_args.update(best_params)
+        logger.info(f"Автоподбор завершен. Лучшие параметры: {best_params}")
 
     model_stem = Path(model_name).stem
     new_model_path = os.path.join(models_dir, model_name)

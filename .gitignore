@@ -5,4 +5,5 @@ __pycache__/
 logs/
 cleared/
 models/
+catboost_info/
 test_set.csv

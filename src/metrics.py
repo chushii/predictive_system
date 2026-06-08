@@ -18,18 +18,18 @@ def get_model_status(horizon_display: str) -> str:
     model_path = f"models/catboost_{horizon}.cbm"
     error_file = os.path.join(info_dir, "learn_error.tsv")
 
-    if not os.path.exists(info_dir):
+    if not os.path.exists(model_path):
         return "Отсутствует"
+
+    if not os.path.exists(info_dir):
+        return "Незавершена"
 
     if os.path.exists(error_file):
         mtime = os.path.getmtime(error_file)
         if time.time() - mtime < 30:
             return "Обучается"
 
-    if os.path.exists(model_path):
-        return "Готова"
-
-    return "Незавершена"
+    return "Готова"
 
 def get_model_metrics(horizon_display: str) -> dict:
     horizon = HORIZON_MAP.get(horizon_display, "3m")
