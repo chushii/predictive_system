@@ -1,9 +1,8 @@
 .idea/
 .venv/
 .ipynb_checkpoints/
-catboost_info/
 __pycache__/
 logs/
 cleared/
-test_set.csv
 models/
+test_set.csv
