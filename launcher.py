@@ -43,11 +43,15 @@ def main():
     api_port = config['system']['api']['port']
     ui_host = config['system']['ui']['host']
     ui_port = config['system']['ui']['port']
+    admin_host = config['system']['admin']['host']
+    admin_port = config['system']['admin']['port']
 
     os.environ["PRED_API_HOST"] = str(api_host)
     os.environ["PRED_API_PORT"] = str(api_port)
     os.environ["PRED_UI_HOST"] = str(ui_host)
     os.environ["PRED_UI_PORT"] = str(ui_port)
+    os.environ["PRED_ADMIN_HOST"] = str(admin_host)
+    os.environ["PRED_ADMIN_PORT"] = str(admin_port)
 
     creation_flags = 0
     if sys.platform == "win32":
@@ -87,6 +91,24 @@ def main():
         processes.append(("UI", ui_process))
         threading.Thread(target=stream_output, args=(ui_process, "UI"), daemon=True).start()
         logger.info(f"UI: http://{ui_host}:{ui_port}")
+
+        admin_cmd = [
+            sys.executable, "-m", "streamlit", "run", "src/admin.py",
+            "--server.address", str(admin_host),
+            "--server.port", str(admin_port),
+            "--server.headless", "true",
+            "--browser.gatherUsageStats", "false"
+        ]
+        admin_process = subprocess.Popen(
+            admin_cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            creationflags=creation_flags,
+            cwd=Path(__file__).parent
+        )
+        processes.append(("Admin UI", admin_process))
+        threading.Thread(target=stream_output, args=(admin_process, "Admin UI"), daemon=True).start()
+        logger.info(f"Admin UI: http://{admin_host}:{admin_port}")
 
         logger.info("Ожидание инициализации сервисов...")
         time.sleep(5)

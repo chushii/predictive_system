@@ -16,14 +16,14 @@ logging.basicConfig(
 logger = logging.getLogger("app")
 
 if 'app_started' not in st.session_state:
-    logger.info("Streamlit-приложение запущено")
+    logger.info("Streamlit-приложение (Прогноз) запущено")
     st.session_state.app_started = True
 
 API_HOST = os.getenv("PRED_API_HOST", "127.0.0.1")
 API_PORT = os.getenv("PRED_API_PORT", "8000")
 API_URL = f"http://{API_HOST}:{API_PORT}/predict"
 
-st.set_page_config(page_title="PredSys", layout="centered")
+st.set_page_config(page_title="PredSys - Прогноз", layout="centered")
 st.title("Прогнозирование тенденций использования программных компонент")
 
 DEFAULTS = {
@@ -111,7 +111,6 @@ csv_input = st.text_area(
 
 if st.button(" Импорт", type="secondary"):
     if csv_input.strip():
-        logger.info("Импорт данных из строки")
         parsed = parse_csv_row(csv_input)
         if parsed:
             for k, v in parsed.items():
@@ -231,7 +230,7 @@ if submitted:
             response = requests.post(API_URL, json=payload, timeout=30)
             response.raise_for_status()
             result = response.json()
-            logger.info("Прогноз получен успешно")
+            logger.info("Прогноз успешно получен")
             st.success("Прогноз успешно получен!")
             col_r1, col_r2 = st.columns(2)
             with col_r1:
