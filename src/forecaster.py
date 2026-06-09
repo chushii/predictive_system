@@ -92,8 +92,8 @@ def build_model(horizon: str, auto_tune: bool = False) -> None:
         def objective(trial):
             tune_args = model_args.copy()
             tune_args["iterations"] = trial.suggest_int("iterations", 500, 1500, log=True)
-            tune_args["learning_rate"] = trial.suggest_float("learning_rate", 0.01, 0.1, log=True)
-            tune_args["depth"] = trial.suggest_int("depth", 4, 10, log=True)
+            tune_args["learning_rate"] = round(trial.suggest_float("learning_rate", 0.01, 0.1, log=True), 3)
+            tune_args["depth"] = trial.suggest_int("depth", 6, 12, log=True)
 
             trial_model = CatBoostRegressor(
                 **tune_args, cat_features=cat_feats, verbose=False
@@ -103,7 +103,7 @@ def build_model(horizon: str, auto_tune: bool = False) -> None:
             return trial_model.get_best_score()["validation"]["MAPE"]
 
         study = optuna.create_study(direction="minimize")
-        study.optimize(objective, n_trials=10)
+        study.optimize(objective, n_trials=10, show_progress_bar=False)
 
         best_params = study.best_params
         model_args.update(best_params)

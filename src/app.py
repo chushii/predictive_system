@@ -4,13 +4,14 @@ import logging
 import csv
 import io
 import os
+import sys
 
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format="%(name)s: %(message)s",
     handlers=[
-        logging.StreamHandler()
+        logging.StreamHandler(sys.stdout)
     ]
 )
 logger = logging.getLogger("app")

@@ -2,13 +2,14 @@ import streamlit as st
 import requests
 import logging
 import os
+import sys
 
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format="%(name)s: %(message)s",
     handlers=[
-        logging.StreamHandler()
+        logging.StreamHandler(sys.stdout)
     ]
 )
 logger = logging.getLogger("admin")
@@ -17,8 +18,10 @@ if 'app_started' not in st.session_state:
     logger.info("Streamlit-приложение (Админ-панель) запущено")
     st.session_state.app_started = True
 
-st.set_page_config(page_title="PredSys - Админ-панель", layout="wide")
+st.set_page_config(page_title="PredSys - Админ-панель", layout="centered")
 st.title("PredSys - Панель мониторинга и управления")
+if st.button("Обновить данные", use_container_width=True):
+    st.rerun()
 
 API_HOST = os.getenv("PRED_API_HOST", "127.0.0.1")
 API_PORT = os.getenv("PRED_API_PORT", "8000")
@@ -28,11 +31,6 @@ tab_dashboard, tab_management = st.tabs(["Дэшборд", "Управление
 HORIZONS = ["3 месяца", "6 месяцев", "12 месяцев"]
 
 with tab_dashboard:
-    st.header("Дэшборд")
-    st.markdown("---")
-    if st.button("Обновить данные"):
-        st.rerun()
-
     try:
         response = requests.get(f"{API_URL}/api/metrics", timeout=5)
         response.raise_for_status()
@@ -61,13 +59,13 @@ with tab_dashboard:
                 else:
                     status_color = "red"
 
-                st.markdown(f"Статус: <span style='color:{status_color}; font-weight:bold;'>{status}</span>",
+                st.markdown(f"- Статус: <span style='color:{status_color}; font-weight:bold;'>{status}</span>",
                             unsafe_allow_html=True)
 
                 metrics = model_data['metrics']
-                st.write(f"MAPE: {metrics.get('MAPE', 'N/A')}")
-                st.write(f"RMSE: {metrics.get('RMSE', 'N/A')}")
-                st.write(f"Итераций: {metrics.get('Итераций', 'N/A')}")
+                st.write(f"- MAPE: {metrics.get('MAPE', 'N/A')}")
+                st.write(f"- RMSE: {metrics.get('RMSE', 'N/A')}")
+                st.write(f"- Итераций: {metrics.get('Итераций', 'N/A')}")
 
         st.subheader("Системный лог")
         st.code(data['logs'], language="text")
@@ -76,8 +74,6 @@ with tab_dashboard:
         st.error(f"Не удалось подключиться к серверу: {e}. Убедитесь, что server.py запущен.")
 
 with tab_management:
-    st.header("Управление моделями")
-
     try:
         status_response = requests.get(f"{API_URL}/api/models/status", timeout=5)
         status_response.raise_for_status()
@@ -86,10 +82,8 @@ with tab_management:
         st.error(f"Не удалось получить статус файлов моделей: {e}")
         models_status = {}
 
-    st.markdown("---")
-
     for horizon in HORIZONS:
-        st.subheader(f"Горизонт: {horizon}")
+        st.header(f"Горизонт: {horizon}")
         status = models_status.get(horizon, {})
 
         col_info1, col_info2 = st.columns(2)
@@ -97,8 +91,6 @@ with tab_management:
             st.write(f"**Основная модель:** {status.get('main_date') or 'отсутствует'}")
         with col_info2:
             st.write(f"**Резервная копия:** {status.get('backup_date') or 'отсутствует'}")
-
-        st.markdown("---")
 
         col_btn1, col_btn2, col_btn3 = st.columns(3)
 
@@ -139,3 +131,5 @@ with tab_management:
                         st.error(f"Ошибка соединения: {e}")
 
         st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown("---")
